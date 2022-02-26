@@ -8,8 +8,10 @@ The intent of this project is to provide a list of EXE names (and possibly file 
 
 Information for this list gained from various sources.
 
-Please check this list for LOL bins, or Mitre's Software list for additional information.
+Similiar resources to this one:  https://lolbas-project.github.io/,  
+or Mitre's Software list for additional information, https://attack.mitre.org/techniques/T1518/001/
 
+.  
 
 Executable    | Description   | Used For    | MITRE ATT@ACK  |  
 | ----------- | -----------   | ----------- | -----------    |  
