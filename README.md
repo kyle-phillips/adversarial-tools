@@ -23,3 +23,12 @@ Executable    | Description   | Used For    | MITRE ATT@ACK  |
 | netscan.exe | Scan/recon for a network | Network and host discovery | |
 | netstat.exe | View network connections for a local host | Not useful for threat hunting because used for too many legit purposes |
 | nmap.exe | Network mapper | Network discovery, host discovery, open ports, etc. | |
+| plink.exe | Command line SSH client (PuTTy link) | APT28, UNC757, UNC2448 | |
+| psexec.exe | A free Microsoft tool that can be used to execute a program on another computer | | https://attack.mitre.org/techniques/T1136  https://attack.mitre.org/techniques/T1543  https://attack.mitre.org/techniques/T1570  https://attack.mitre.org/techniques/T1021  https://attack.mitre.org/techniques/T1569 | 
+| putty.exe | SSH client | | | 
+| radmin.exe | Remote software | Used by various threat actors for remote access | https://attack.mitre.org/techniques/T1072/ |
+| rclone.exe | Command line tool - used to manage cloud storage | Darkside | |
+| sharphound.exe | Active Directory collector for Bloodhound | https://bloodhound.readthedocs.io/en/latest/data-collection/sharphound.html | |
+| vnc.exe | Remote desktop software | Common adversarial tool | https://attack.mitre.org/techniques/T1021/  https://attack.mitre.org/techniques/T1133/  https://attack.mitre.org/techniques/T1219/  |
+| wmic.exe | Windows Management Instrumentation (command line) | Commonly used by machine accounts; threat hunting should focus on user activity | https://attack.mitre.org/techniques/T1047/  | 
+ 
