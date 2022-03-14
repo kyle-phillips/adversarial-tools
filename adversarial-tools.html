@@ -1,0 +1,206 @@
+<html lang="en-US">
+<head>
+    <style>
+        table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  padding:6pt
+}
+    </style>
+<title>Adversarial Tools</title>
+</head>
+
+<table style="width:80%">
+ <tr>
+     <th style="width:3%">#</th>
+     <th style="width:12%">Name</th>
+     <th style="width:10%">Type</th>
+     <th style="width:31%">Description</th>
+     <th style="width:31%">Used For</th>
+     <th style="width:12%">MITRE ATT@ACK</th>
+ </tr>
+ <tr>
+     <td>1</td>
+     <td>7za.exe</td>	<td>Tool</td><td>Compression app (command line)</td><td>Sometimes used for malicious activity. Also commonly used for legitimate activity, therefore, difficult to use for threat hunting.</td>
+     <td><a target="_blank" href="https://attack.mitre.org/techniques/T1027/">T1027</a></td>
+ </tr>
+
+ <tr>
+    <td>2</td>
+    <td>adFind.exe</td><td>LOLbin</td>	<td>Command line Active Directory tool.</td><td>Used to enumerate domain users, groups, organizational units, etc.</td>	
+     <td><a target="_blank" href="https://attack.mitre.org/techniques/T1087">T1087</a><br>
+        <a target="_blank" href="https://attack.mitre.org/techniques/T1482">T1482</a><Br> 
+        <a target="_blank" href="https://attack.mitre.org/techniques/T1069">T1069</a><br> 
+        <a target="_blank" href="https://attack.mitre.org/techniques/T1018">T1018</a><br> 
+        <a target="_blank" href="https://attack.mitre.org/techniques/T1016">T1016</a></td>
+</tr>
+
+<tr>
+    <td>3</td>
+    <td>arp.exe</td>
+    <td>LOLbin</td>
+    <td>Display info about Address Resolution Protocol</td>
+    <td>Commonly used by Windows OS, mostly under "machine" account type. User use is unusual.</td>
+    <td></td>
+</tr>
+<tr>
+    <td>4</td>
+    <td>eqnedt.exe</td>
+    <td>LOLbin</td>
+    <td>Microsoft Equation Editor</td>
+    <td>Vulnerable if unpatched</td>
+    <td></td>
+</tr>
+<tr>
+    <td>5</td>
+    <td>dsquery.dll</td>
+    <td>LOLbin</td>
+    <td>Microsoft domain query </td>
+    <td>A command-line utility that can be used to query Active Directory for information from a system within a domain. It is typically installed only on Windows Server versions but can be installed on non-server variants through the Microsoft-provided Remote Server Administration Tools bundle.</td>
+    <td><a target="_blank" href="https://attack.mitre.org/techniques/T1087/">T1087</a> <br>
+        <a target="_blank" href="https://attack.mitre.org/techniques/T1482/">T1482</a> <br>
+        <a target="_blank" href="https://attack.mitre.org/techniques/T1069/">T1069</a><br></td>
+
+</tr>
+
+<tr>
+    <td>6</td>
+    <td>mimikatz.exe</td>
+    <td>Tool</td>
+    <td>Credential dumper</td>
+    <td>Execution likely to be noticed by EDR</td>
+    <td>numerous</td>
+</tr>
+
+<tr>
+    <td>7</td>
+    <td>ngrok.exe</td>
+    <td>Tool</td>
+    <td>Reverse proxy tool</td>
+    <td>Provides secure tunnel to Internet</td>
+    <td><a target="_blank" href="https://attack.mitre.org/techniques/T1046">T1046</a> <br>
+        <a target="_blank" href="https://attack.mitre.org/techniques/T1040">T1040</a><br>
+        <a target="_blank" href="https://attack.mitre.org/techniques/T1018M">T1018M</a><br>
+        <a target="_blank" href="https://attack.mitre.org/techniques/T1016">T1016</a><br> 
+        <a target="_blank" href="https://attack.mitre.org/techniques/T1033">T1033</a><br>
+    </td>
+ </tr>
+    <tr>
+        <td>8</td>
+        <td>nbtscan.exe</td>
+        <td>Tool</td>
+        <td>Scan/recon for a network</td>
+        <td>Network and host discovery</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>9</td>
+        <td>netscan.exe</td>
+        <td>Tool</td>
+        <td>Scan/recon for a network</td>
+        <td>Network and host discovery</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>10</td>
+        <td>netstat.exe</td>
+        <td>LOLbin</td>
+        <td>View network connections for a local host</td>
+        <td>May not be useful for threat hunting as too commonly used.</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>11</td>
+        <td>nmap.exe</td>
+        <td>Tool</td>
+        <td>Network mapper</td>
+        <td>Network discovery, host discovery, open ports, etc.</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>12</td>
+        <td>plink.exe</td>
+        <td>Tool</td>
+        <td>ommand line SSH client (PuTTy link)</td>
+        <td>APT28, UNC757, UNC2448</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>13</td>
+        <td>psexec.exe</td>
+        <td>LOLbin</td>
+        <td>Remote execution</td>
+        <td>A free Microsoft tool that can be used to execute a program on another computer	</td>
+        <td><a target="_blank" href="https://attack.mitre.org/techniques/T1136">T1136</a><br>
+            <a target="_blank" href="https://attack.mitre.org/techniques/T1543">T1543</a><br>
+            <a target="_blank" href="https://attack.mitre.org/techniques/T1570">T1570</a><br> 
+            <a target="_blank" href="https://attack.mitre.org/techniques/T1021">T1021</a><br> 
+            <a target="_blank" href="https://attack.mitre.org/techniques/T1569">T1569</a></td>
+    </tr>
+    <tr>
+        <td>14</td>
+        <td>putty.exe</td>
+        <td>Tool</td>
+        <td>SSH client</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>15</td>
+        <td>radmin.exe</td>
+        <td>Tool</td>
+        <td>Remote software</td>
+        <td>Used by various threat actors for remote access</td>
+        <td><a target="_blank" href="https://attack.mitre.org/techniques/T1072/">T1072</a></td>
+    </tr>
+    <tr>
+        <td>16</td>
+        <td>rclone.exe</td>
+        <td>Tool</td>
+        <td>Command line tool - used to manage cloud storage</td>
+        <td>Darkside</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>17</td>
+        <td>sharphound.exe</td>
+        <td>Tool</td>
+        <td>Active Directory collector for Bloodhound</td>
+        <td><a target="_blank" href="https://bloodhound.readthedocs.io/en/latest/data-collection/sharphound.html">https://bloodhound.readthedocs.io/en/latest/data-collection/sharphound.html</a></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>18</td>
+        <td>vnc.exe</td>
+        <td>Tool</td>
+        <td>Remote desktop software</td>
+        <td>Common adversarial tool</td>
+        <td><a target="_blank" href="https://attack.mitre.org/techniques/T1021/">T1021</a> <br>
+            <a target="_blank" href="https://attack.mitre.org/techniques/T1133/">T1133</a> <br>
+            <a target="_blank" href="https://attack.mitre.org/techniques/T1219/">T1219</a> <br>
+
+        </td>
+    </tr>
+    <tr>
+        <td>19</td>
+        <td>wireshark.exe</td>
+        <td>Tool</td>
+        <td>Network packet sniffer</td>
+        <td>Capture and filter PCAPs on a network</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>20</td>
+        <td>wmic.exe</td>
+        <td>LOLbin</td>
+        <td>Windows Management Instrumentation (command line)</td>
+        <td>Commonly used by machine accounts; threat hunting should focus on user activity</td>
+        <td><a target="_blank" href="https://attack.mitre.org/techniques/T1047/">T1047</a></td>
+    </tr>
+
+</table>
+
+
+ 			
+ 		
+ 			
