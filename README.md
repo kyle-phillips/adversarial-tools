@@ -14,8 +14,8 @@ or Mitre's Software list for additional information, https://attack.mitre.org/te
 
 **Change log**
 
-3/14/2022 - Converted list to HTML; Added wireshark; Added column for type (LOLBin, Tool, Script); Added column for row number
-3/16/2022 - Added rar.exe and ntdsutil.exe
+3/16/2022 - Added rar.exe and ntdsutil.exe  
+3/14/2022 - Converted list to HTML; Added wireshark; Added column for type (LOLBin, Tool, Script); Added column for row number  
 
 
 
