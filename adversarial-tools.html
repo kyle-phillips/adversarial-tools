@@ -54,26 +54,34 @@
 </tr>
 <tr>
     <td>4</td>
+    <td>chcp.exe</td>
+    <td>LOLbin</td>
+    <td>Microsoft console utility.</td>
+    <td>Changes the active console code page. If used without parameters, chcp displays the number of the active console code page.</td>
+    <td></td>
+</tr>
+<tr>
+    <td>5</td>
+    <td>dsquery.exe</td>
+    <td>LOLbin</td>
+    <td>Microsoft Active Diretory tool</td>
+    <td>dsquery is a command-line utility that can be used to query Active Directory for information from a system within a domain.</td>
+    <td><a target="_blank" href="https://attack.mitre.org/techniques/T1087">T1087</a> <br>
+        <a target="_blank" href="https://attack.mitre.org/techniques/T1482">T1482</a> <br>
+        <a target="_blank" href="https://attack.mitre.org/techniques/T1069">T1069</a>
+    </td>
+</tr>
+<tr>
+    <td>6</td>
     <td>eqnedt.exe</td>
     <td>LOLbin</td>
     <td>Microsoft Equation Editor</td>
     <td>Vulnerable if unpatched</td>
     <td></td>
 </tr>
-<tr>
-    <td>5</td>
-    <td>dsquery.dll</td>
-    <td>LOLbin</td>
-    <td>Microsoft domain query </td>
-    <td>A command-line utility that can be used to query Active Directory for information from a system within a domain. It is typically installed only on Windows Server versions but can be installed on non-server variants through the Microsoft-provided Remote Server Administration Tools bundle.</td>
-    <td><a target="_blank" href="https://attack.mitre.org/techniques/T1087/">T1087</a> <br>
-        <a target="_blank" href="https://attack.mitre.org/techniques/T1482/">T1482</a> <br>
-        <a target="_blank" href="https://attack.mitre.org/techniques/T1069/">T1069</a><br></td>
-
-</tr>
 
 <tr>
-    <td>6</td>
+    <td>7</td>
     <td>mimikatz.exe</td>
     <td>Tool</td>
     <td>Credential dumper</td>
@@ -82,7 +90,39 @@
 </tr>
 
 <tr>
-    <td>7</td>
+        <td>8<td>
+        <td>nbtscan.exe</td>
+        <td>Tool</td>
+        <td>Scan/recon for a network</td>
+        <td>Network and host discovery</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>9</td>
+        <td>net.exe</td>
+        <td>LOLbin</td>
+        <td>The Net utility is a component of the Windows operating system. It is used in command-line operations for control of users, groups, services, and network connections.</td>
+        <td>Most useful threat hunting strings to search for are: "net.exe config" "net.exe group" "net.exe user" "net.exe view"</td>
+        <td>numerous</td>
+    </tr>
+    <tr>
+        <td>10</td>
+        <td>netscan.exe</td>
+        <td>Tool</td>
+        <td>Scan/recon for a network</td>
+        <td>Network and host discovery</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>11</td>
+        <td>netstat.exe</td>
+        <td>LOLbin</td>
+        <td>View network connections for a local host</td>
+        <td>May not be useful for threat hunting as too commonly used.</td>
+        <td></td>
+    </tr>
+<tr>
+    <td>12</td>
     <td>ngrok.exe</td>
     <td>Tool</td>
     <td>Reverse proxy tool</td>
@@ -95,31 +135,7 @@
     </td>
  </tr>
     <tr>
-        <td>8</td>
-        <td>nbtscan.exe</td>
-        <td>Tool</td>
-        <td>Scan/recon for a network</td>
-        <td>Network and host discovery</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>9</td>
-        <td>netscan.exe</td>
-        <td>Tool</td>
-        <td>Scan/recon for a network</td>
-        <td>Network and host discovery</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>10</td>
-        <td>netstat.exe</td>
-        <td>LOLbin</td>
-        <td>View network connections for a local host</td>
-        <td>May not be useful for threat hunting as too commonly used.</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td>11</td>
+        <td>13</td>
         <td>nmap.exe</td>
         <td>Tool</td>
         <td>Network mapper</td>
@@ -127,23 +143,23 @@
         <td></td>
     </tr>
    <tr>
-        <td>12</td>
-        <td>ntdsutil.exe.exe</td>
+        <td>14</td>
+        <td>ntdsutil.exe</td>
         <td>LOL bin</td>
         <td>Command Line tool for managing Active Directory</td>
         <td>Possible to use this tool for enumerating AD accounts.</td>
         <td><a target="_blank" href="https://attack.mitre.org/versions/v10/techniques/T1003/003/">T1003.003</a></td>
     </tr>
     <tr>
-        <td>13</td>
+        <td>15</td>
         <td>plink.exe</td>
         <td>Tool</td>
-        <td>ommand line SSH client (PuTTy link)</td>
+        <td>Command line SSH client (PuTTy link)</td>
         <td>APT28, UNC757, UNC2448</td>
         <td></td>
     </tr>
     <tr>
-        <td>14</td>
+        <td>16</td>
         <td>psexec.exe</td>
         <td>LOLbin</td>
         <td>Remote execution</td>
@@ -155,15 +171,24 @@
             <a target="_blank" href="https://attack.mitre.org/techniques/T1569">T1569</a></td>
     </tr>
     <tr>
-        <td>15</td>
+        <td>17</td>
         <td>putty.exe</td>
         <td>Tool</td>
         <td>SSH client</td>
         <td></td>
         <td></td>
     </tr>
+    Displays information about user sessions on a Remote Desktop Session Host server
     <tr>
-        <td>16</td>
+        <td>18</td>
+        <td>query.exe</td>
+        <td>LOLbin</td>
+        <td>Displays information about user sessions on a Remote Desktop Session Host server</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>19</td>
         <td>radmin.exe</td>
         <td>Tool</td>
         <td>Remote software</td>
@@ -171,7 +196,7 @@
         <td><a target="_blank" href="https://attack.mitre.org/techniques/T1072/">T1072</a></td>
     </tr>
       <tr>
-        <td>17</td>
+        <td>20</td>
         <td>rar.exe</td>
         <td>Tool</td>
         <td>Data compression software</td>
@@ -180,7 +205,7 @@
     </tr>
 
     <tr>
-        <td>18</td>
+        <td>21</td>
         <td>rclone.exe</td>
         <td>Tool</td>
         <td>Command line tool - used to manage cloud storage</td>
@@ -188,7 +213,7 @@
         <td></td>
     </tr>
     <tr>
-        <td>19</td>
+        <td>22</td>
         <td>sharphound.exe</td>
         <td>Tool</td>
         <td>Active Directory collector for Bloodhound</td>
@@ -196,7 +221,16 @@
         <td></td>
     </tr>
     <tr>
-        <td>20</td>
+        <td>23</td>
+        <td>systeminfo.exe</td>
+        <td>LOLbins</td>
+        <td>Command line tool to display system information.</td>
+        <td>An adversary may attempt to get detailed information about the operating system and hardware, including version, patches, hotfixes, service packs, and architecture.</td>
+        <td><a target="_blank" href="https://attack.mitre.org/techniques/T1082/">T1082</a></td>
+        
+    </tr>
+    <tr>
+        <td>24</td>
         <td>vnc.exe</td>
         <td>Tool</td>
         <td>Remote desktop software</td>
@@ -208,7 +242,16 @@
         </td>
     </tr>
     <tr>
-        <td>21</td>
+        <td>25</td>
+        <td>vssadmin.exe</td>
+        <td>LOLbin</td>
+        <td>Display the current volume shadow copy backups and all installed shadow copy writers and providers.</td>
+        <td></td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td>26</td>
         <td>wireshark.exe</td>
         <td>Tool</td>
         <td>Network packet sniffer</td>
@@ -216,7 +259,7 @@
         <td></td>
     </tr>
     <tr>
-        <td>22</td>
+        <td>27</td>
         <td>wmic.exe</td>
         <td>LOLbin</td>
         <td>Windows Management Instrumentation (command line)</td>
