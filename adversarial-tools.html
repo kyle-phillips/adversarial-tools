@@ -33,9 +33,17 @@
      <td>7za.exe</td>	<td>Tool</td><td>Compression app (command line)</td><td>Sometimes used for malicious activity. Also commonly used for legitimate activity, therefore, difficult to use for threat hunting.</td>
      <td><a target="_blank" href="https://attack.mitre.org/techniques/T1027/">T1027</a></td>
  </tr>
-
  <tr>
     <td>2</td>
+    <td>adexplorer.exe<br>adexplorer64.exe<br>adexplorer64a.exe</td>
+    <td>Tool</td>
+    <td>Sysinternls Active Directory Explorer.</td>
+    <td></td>
+    <td></td>
+</tr>
+
+ <tr>
+    <td>3</td>
     <td>adFind.exe</td><td>LOLbin</td>	<td>Command line Active Directory tool.</td><td>Used to enumerate domain users, groups, organizational units, etc.</td>	
      <td><a target="_blank" href="https://attack.mitre.org/techniques/T1087">T1087</a><br>
         <a target="_blank" href="https://attack.mitre.org/techniques/T1482">T1482</a><Br> 
@@ -45,7 +53,7 @@
 </tr>
 
 <tr>
-    <td>3</td>
+    <td>4</td>
     <td>arp.exe</td>
     <td>LOLbin</td>
     <td>Display info about Address Resolution Protocol</td>
@@ -53,7 +61,7 @@
     <td></td>
 </tr>
 <tr>
-    <td>4</td>
+    <td>5</td>
     <td>chcp.exe</td>
     <td>LOLbin</td>
     <td>Microsoft console utility.</td>
@@ -61,7 +69,7 @@
     <td></td>
 </tr>
 <tr>
-    <td>5</td>
+    <td>6</td>
     <td>dsquery.exe</td>
     <td>LOLbin</td>
     <td>Microsoft Active Diretory tool</td>
@@ -72,7 +80,7 @@
     </td>
 </tr>
 <tr>
-    <td>6</td>
+    <td>7</td>
     <td>eqnedt.exe</td>
     <td>LOLbin</td>
     <td>Microsoft Equation Editor</td>
@@ -81,7 +89,7 @@
 </tr>
 
 <tr>
-    <td>7</td>
+    <td>8</td>
     <td>mimikatz.exe</td>
     <td>Tool</td>
     <td>Credential dumper</td>
@@ -90,7 +98,7 @@
 </tr>
 
 <tr>
-    <td>8</td>
+    <td>9</td>
     <td>nbtscan.exe</td>
     <td>Tool</td>
     <td>Scan/recon for a network</td>
@@ -98,7 +106,7 @@
     <td></td>
 </tr>
     <tr>
-        <td>9</td>
+        <td>10</td>
         <td>net.exe</td>
         <td>LOLbin</td>
         <td>The Net utility is a component of the Windows operating system. It is used in command-line operations for control of users, groups, services, and network connections.</td>
@@ -106,7 +114,7 @@
         <td>numerous</td>
     </tr>
     <tr>
-        <td>10</td>
+        <td>11</td>
         <td>netscan.exe</td>
         <td>Tool</td>
         <td>Scan/recon for a network</td>
@@ -114,7 +122,7 @@
         <td></td>
     </tr>
     <tr>
-        <td>11</td>
+        <td>12</td>
         <td>netstat.exe</td>
         <td>LOLbin</td>
         <td>View network connections for a local host</td>
@@ -122,7 +130,7 @@
         <td></td>
     </tr>
 <tr>
-    <td>12</td>
+    <td>13</td>
     <td>ngrok.exe</td>
     <td>Tool</td>
     <td>Reverse proxy tool</td>
@@ -135,7 +143,7 @@
     </td>
  </tr>
     <tr>
-        <td>13</td>
+        <td>14</td>
         <td>nmap.exe</td>
         <td>Tool</td>
         <td>Network mapper</td>
@@ -143,15 +151,15 @@
         <td></td>
     </tr>
    <tr>
-        <td>14</td>
+        <td>15</td>
         <td>ntdsutil.exe</td>
-        <td>LOL bin</td>
+        <td>LOLbin</td>
         <td>Command Line tool for managing Active Directory</td>
         <td>Possible to use this tool for enumerating AD accounts.</td>
         <td><a target="_blank" href="https://attack.mitre.org/versions/v10/techniques/T1003/003/">T1003.003</a></td>
     </tr>
     <tr>
-        <td>15</td>
+        <td>16</td>
         <td>plink.exe</td>
         <td>Tool</td>
         <td>Command line SSH client (PuTTy link)</td>
@@ -159,11 +167,27 @@
         <td></td>
     </tr>
     <tr>
-        <td>16</td>
+        <td>17</td>
+        <td>procexp.exe<br>procexp64.exe<br>procexp64a.exe</td>
+        <td>Tool</td>
+        <td>Sysinternls Process Explorer.</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>18</td>
+        <td>processhacker.exe</td>
+        <td>Tool</td>
+        <td>Open source tool to see running processes in Windows.  Copy cat of Sysinternls Process Explorer.</td>
+        <td>Used by Lapsus$</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>19</td>
         <td>psexec.exe</td>
-        <td>LOLbin</td>
+        <td>Tool</td>
         <td>Remote execution</td>
-        <td>A free Microsoft tool that can be used to execute a program on another computer	</td>
+        <td>A free Microsoft tool that can be used to execute a program on another computer. Sysinternals</td>
         <td><a target="_blank" href="https://attack.mitre.org/techniques/T1136">T1136</a><br>
             <a target="_blank" href="https://attack.mitre.org/techniques/T1543">T1543</a><br>
             <a target="_blank" href="https://attack.mitre.org/techniques/T1570">T1570</a><br> 
@@ -171,7 +195,16 @@
             <a target="_blank" href="https://attack.mitre.org/techniques/T1569">T1569</a></td>
     </tr>
     <tr>
-        <td>17</td>
+        <td>20</td>
+        <td>pskill.exe<br>pskill64.exe</td>
+        <td>Tool</td>
+        <td>Terminates a local process</td>
+        <td>Sysinternals tool</td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td>21</td>
         <td>putty.exe</td>
         <td>Tool</td>
         <td>SSH client</td>
@@ -179,7 +212,15 @@
         <td></td>
     </tr>
     <tr>
-        <td>18</td>
+        <td>22</td>
+        <td>pwdump.exe</td>
+        <td>Tool</td>
+        <td>Credential dumper</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>23</td>
         <td>query.exe</td>
         <td>LOLbin</td>
         <td>Displays information about user sessions on a Remote Desktop Session Host server</td>
@@ -187,7 +228,7 @@
         <td></td>
     </tr>
     <tr>
-        <td>19</td>
+        <td>24</td>
         <td>radmin.exe</td>
         <td>Tool</td>
         <td>Remote software</td>
@@ -195,7 +236,7 @@
         <td><a target="_blank" href="https://attack.mitre.org/techniques/T1072/">T1072</a></td>
     </tr>
       <tr>
-        <td>20</td>
+        <td>25</td>
         <td>rar.exe</td>
         <td>Tool</td>
         <td>Data compression software</td>
@@ -204,7 +245,7 @@
     </tr>
 
     <tr>
-        <td>21</td>
+        <td>26</td>
         <td>rclone.exe</td>
         <td>Tool</td>
         <td>Command line tool - used to manage cloud storage</td>
@@ -212,7 +253,7 @@
         <td></td>
     </tr>
     <tr>
-        <td>22</td>
+        <td>27</td>
         <td>sharphound.exe</td>
         <td>Tool</td>
         <td>Active Directory collector for Bloodhound</td>
@@ -220,16 +261,16 @@
         <td></td>
     </tr>
     <tr>
-        <td>23</td>
+        <td>28</td>
         <td>systeminfo.exe</td>
-        <td>LOLbins</td>
+        <td>LOLbin</td>
         <td>Command line tool to display system information.</td>
         <td>An adversary may attempt to get detailed information about the operating system and hardware, including version, patches, hotfixes, service packs, and architecture.</td>
         <td><a target="_blank" href="https://attack.mitre.org/techniques/T1082/">T1082</a></td>
         
     </tr>
     <tr>
-        <td>24</td>
+        <td>29</td>
         <td>vnc.exe</td>
         <td>Tool</td>
         <td>Remote desktop software</td>
@@ -241,7 +282,7 @@
         </td>
     </tr>
     <tr>
-        <td>25</td>
+        <td>30</td>
         <td>vssadmin.exe</td>
         <td>LOLbin</td>
         <td>Display the current volume shadow copy backups and all installed shadow copy writers and providers.</td>
@@ -250,7 +291,7 @@
     </tr>
 
     <tr>
-        <td>26</td>
+        <td>31</td>
         <td>wireshark.exe</td>
         <td>Tool</td>
         <td>Network packet sniffer</td>
@@ -258,7 +299,7 @@
         <td></td>
     </tr>
     <tr>
-        <td>27</td>
+        <td>32</td>
         <td>wmic.exe</td>
         <td>LOLbin</td>
         <td>Windows Management Instrumentation (command line)</td>
@@ -268,7 +309,4 @@
 
 </table>
 
-
- 			
- 		
  			
