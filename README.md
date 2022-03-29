@@ -13,7 +13,7 @@ or Mitre's Software list for additional information, https://attack.mitre.org/te
 
 
 **Change log**
-3/28/2022 - Added Process Explorer, PSKill, AD Explorer, pwddump, and Process Hacker
+3/28/2022 - Added Process Explorer, PSKill, AD Explorer, pwddump, and Process Hacker  
 3/16/2022 - Added 8 new EXEs; corrected spelling errors
 3/14/2022 - Converted list to HTML; Added wireshark; Added column for type (LOLBin, Tool, Script); Added column for row number  
 
