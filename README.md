@@ -12,9 +12,10 @@ Similiar resources to this one: https://lolbas-project.github.io/,
 or Mitre's Software list for additional information, https://attack.mitre.org/techniques/T1518/001/
 
 
-**Change log**
+**Change log**  
+4/9/2022 - Added keytool, curl, wget, anydesk  
 3/28/2022 - Added Process Explorer, PSKill, AD Explorer, pwddump, and Process Hacker  
-3/16/2022 - Added 8 new EXEs; corrected spelling errors
+3/16/2022 - Added 8 new EXEs; corrected spelling errors  
 3/14/2022 - Converted list to HTML; Added wireshark; Added column for type (LOLBin, Tool, Script); Added column for row number  
 
 
