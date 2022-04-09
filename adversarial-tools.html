@@ -54,6 +54,15 @@
 
 <tr>
     <td>4</td>
+    <td>anydesk.exe</td>
+    <td>Tool</td>
+    <td>Remote access utility</td>
+    <td>Some threat groups use for remote access to a compromised organization.</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td>5</td>
     <td>arp.exe</td>
     <td>LOLbin</td>
     <td>Display info about Address Resolution Protocol</td>
@@ -61,15 +70,25 @@
     <td></td>
 </tr>
 <tr>
-    <td>5</td>
+    <td>6</td>
     <td>chcp.exe</td>
     <td>LOLbin</td>
     <td>Microsoft console utility.</td>
     <td>Changes the active console code page. If used without parameters, chcp displays the number of the active console code page.</td>
     <td></td>
 </tr>
+
 <tr>
-    <td>6</td>
+    <td>7</td>
+    <td>curl.exe</td>
+    <td>LOLbin</td>
+    <td>Used for HTTP, HTTPS, FTP at the command line</td>
+    <td>Download files (malicious) from the command line</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td>8</td>
     <td>dsquery.exe</td>
     <td>LOLbin</td>
     <td>Microsoft Active Diretory tool</td>
@@ -80,7 +99,7 @@
     </td>
 </tr>
 <tr>
-    <td>7</td>
+    <td>9</td>
     <td>eqnedt.exe</td>
     <td>LOLbin</td>
     <td>Microsoft Equation Editor</td>
@@ -89,7 +108,16 @@
 </tr>
 
 <tr>
-    <td>8</td>
+    <td>10</td>
+    <td>keytool.exe</td>
+    <td>Tool</td>
+    <td>Java Platform tool for certificate management</td>
+    <td>Used maliciously to generate a certificate request or import certificates. Some malicious software uses the name "keytool.exe" for their own software</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td>11</td>
     <td>mimikatz.exe</td>
     <td>Tool</td>
     <td>Credential dumper</td>
@@ -98,15 +126,16 @@
 </tr>
 
 <tr>
-    <td>9</td>
+    <td>12</td>
     <td>nbtscan.exe</td>
     <td>Tool</td>
     <td>Scan/recon for a network</td>
     <td>Network and host discovery</td>
     <td></td>
 </tr>
+
     <tr>
-        <td>10</td>
+        <td>13</td>
         <td>net.exe</td>
         <td>LOLbin</td>
         <td>The Net utility is a component of the Windows operating system. It is used in command-line operations for control of users, groups, services, and network connections.</td>
@@ -114,7 +143,7 @@
         <td>numerous</td>
     </tr>
     <tr>
-        <td>11</td>
+        <td>14</td>
         <td>netscan.exe</td>
         <td>Tool</td>
         <td>Scan/recon for a network</td>
@@ -122,7 +151,7 @@
         <td></td>
     </tr>
     <tr>
-        <td>12</td>
+        <td>15</td>
         <td>netstat.exe</td>
         <td>LOLbin</td>
         <td>View network connections for a local host</td>
@@ -130,7 +159,7 @@
         <td></td>
     </tr>
 <tr>
-    <td>13</td>
+    <td>16</td>
     <td>ngrok.exe</td>
     <td>Tool</td>
     <td>Reverse proxy tool</td>
@@ -143,7 +172,7 @@
     </td>
  </tr>
     <tr>
-        <td>14</td>
+        <td>17</td>
         <td>nmap.exe</td>
         <td>Tool</td>
         <td>Network mapper</td>
@@ -151,7 +180,7 @@
         <td></td>
     </tr>
    <tr>
-        <td>15</td>
+        <td>18</td>
         <td>ntdsutil.exe</td>
         <td>LOLbin</td>
         <td>Command Line tool for managing Active Directory</td>
@@ -159,7 +188,7 @@
         <td><a target="_blank" href="https://attack.mitre.org/versions/v10/techniques/T1003/003/">T1003.003</a></td>
     </tr>
     <tr>
-        <td>16</td>
+        <td>19</td>
         <td>plink.exe</td>
         <td>Tool</td>
         <td>Command line SSH client (PuTTy link)</td>
@@ -167,7 +196,7 @@
         <td></td>
     </tr>
     <tr>
-        <td>17</td>
+        <td>20</td>
         <td>procexp.exe<br>procexp64.exe<br>procexp64a.exe</td>
         <td>Tool</td>
         <td>Sysinternls Process Explorer.</td>
@@ -175,7 +204,7 @@
         <td></td>
     </tr>
     <tr>
-        <td>18</td>
+        <td>21</td>
         <td>processhacker.exe</td>
         <td>Tool</td>
         <td>Open source tool to see running processes in Windows.  Copy cat of Sysinternls Process Explorer.</td>
@@ -183,7 +212,7 @@
         <td></td>
     </tr>
     <tr>
-        <td>19</td>
+        <td>22</td>
         <td>psexec.exe</td>
         <td>Tool</td>
         <td>Remote execution</td>
@@ -195,7 +224,7 @@
             <a target="_blank" href="https://attack.mitre.org/techniques/T1569">T1569</a></td>
     </tr>
     <tr>
-        <td>20</td>
+        <td>23</td>
         <td>pskill.exe<br>pskill64.exe</td>
         <td>Tool</td>
         <td>Terminates a local process</td>
@@ -204,7 +233,7 @@
     </tr>
 
     <tr>
-        <td>21</td>
+        <td>24</td>
         <td>putty.exe</td>
         <td>Tool</td>
         <td>SSH client</td>
@@ -212,7 +241,7 @@
         <td></td>
     </tr>
     <tr>
-        <td>22</td>
+        <td>25</td>
         <td>pwdump.exe</td>
         <td>Tool</td>
         <td>Credential dumper</td>
@@ -220,7 +249,7 @@
         <td></td>
     </tr>
     <tr>
-        <td>23</td>
+        <td>26</td>
         <td>query.exe</td>
         <td>LOLbin</td>
         <td>Displays information about user sessions on a Remote Desktop Session Host server</td>
@@ -228,7 +257,7 @@
         <td></td>
     </tr>
     <tr>
-        <td>24</td>
+        <td>27</td>
         <td>radmin.exe</td>
         <td>Tool</td>
         <td>Remote software</td>
@@ -236,7 +265,7 @@
         <td><a target="_blank" href="https://attack.mitre.org/techniques/T1072/">T1072</a></td>
     </tr>
       <tr>
-        <td>25</td>
+        <td>28</td>
         <td>rar.exe</td>
         <td>Tool</td>
         <td>Data compression software</td>
@@ -245,7 +274,7 @@
     </tr>
 
     <tr>
-        <td>26</td>
+        <td>29</td>
         <td>rclone.exe</td>
         <td>Tool</td>
         <td>Command line tool - used to manage cloud storage</td>
@@ -253,7 +282,7 @@
         <td></td>
     </tr>
     <tr>
-        <td>27</td>
+        <td>30</td>
         <td>sharphound.exe</td>
         <td>Tool</td>
         <td>Active Directory collector for Bloodhound</td>
@@ -261,7 +290,7 @@
         <td></td>
     </tr>
     <tr>
-        <td>28</td>
+        <td>31</td>
         <td>systeminfo.exe</td>
         <td>LOLbin</td>
         <td>Command line tool to display system information.</td>
@@ -270,7 +299,7 @@
         
     </tr>
     <tr>
-        <td>29</td>
+        <td>32</td>
         <td>vnc.exe</td>
         <td>Tool</td>
         <td>Remote desktop software</td>
@@ -282,7 +311,7 @@
         </td>
     </tr>
     <tr>
-        <td>30</td>
+        <td>33</td>
         <td>vssadmin.exe</td>
         <td>LOLbin</td>
         <td>Display the current volume shadow copy backups and all installed shadow copy writers and providers.</td>
@@ -291,7 +320,16 @@
     </tr>
 
     <tr>
-        <td>31</td>
+        <td>34</td>
+        <td>wget.exe</td>
+        <td>Tool</td>
+        <td>Used for HTTP, HTTPS, FTP at the command line</td>
+        <td>Download files (malicious) from the command line</td>
+        <td></td>
+    </tr>
+
+    <tr>
+        <td>35</td>
         <td>wireshark.exe</td>
         <td>Tool</td>
         <td>Network packet sniffer</td>
@@ -299,7 +337,7 @@
         <td></td>
     </tr>
     <tr>
-        <td>32</td>
+        <td>36</td>
         <td>wmic.exe</td>
         <td>LOLbin</td>
         <td>Windows Management Instrumentation (command line)</td>
