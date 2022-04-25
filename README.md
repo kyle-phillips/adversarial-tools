@@ -13,6 +13,7 @@ or Mitre's Software list for additional information, https://attack.mitre.org/te
 
 
 **Change log**  
+4/24/2022 - Added nltest, pingcastle  
 4/9/2022 - Added keytool, curl, wget, anydesk  
 3/28/2022 - Added Process Explorer, PSKill, AD Explorer, pwddump, and Process Hacker  
 3/16/2022 - Added 8 new EXEs; corrected spelling errors  
