@@ -2,7 +2,7 @@
 
 This is a working list of tools often used by adversaries in a cyber attack.  
 
-The creation of this list was born out of a desire to know what applications to query for in threat hunting.  In other words, if these executables are running in your environment, you'd way to know.  
+The creation of this list was born out of a desire to know what applications to query for in threat hunting.  In other words, if these executables are running in your environment, you'd want to know.  
 
 This list contains both LOLbins and software tools.
 
