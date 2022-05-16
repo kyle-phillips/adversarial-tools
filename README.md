@@ -1,10 +1,10 @@
 # adversarial-tools
 
-This is a working list of tools often be used by adversaries in a cyber attack.  
+This is a working list of tools often used by adversaries in a cyber attack.  
 
-The creation of this list was born out of a desire to know what applications to query for in threat hunting activities.  
+The creation of this list was born out of a desire to know what applications to query for in threat hunting.  In other words, if these executables are running in your environment, you'd way to know.  
 
-This list contains LOL Bins, and other software tools.
+This list contains both LOLbins and software tools.
 
 [View the list here](https://htmlpreview.github.io/?https://github.com/kyle-phillips/adversarial-tools/blob/main/adversarial-tools.html)
 
