@@ -14,7 +14,13 @@
     color: white;
   }
 }
-    </style>
+<!--
+    
+ TYPES:  Initial Compromise, Discovery, Pivot/Escalate, Persistence, C2/Exfil
+
+ -->
+
+ </style>
 <title>Adversarial Tools</title>
 </head>
 
@@ -30,21 +36,21 @@
  </tr>
  <tr>
      <td></td>
-     <td>7za.exe</td>	<td>Tool</td><td>Compression app (command line)</td><td>Sometimes used for malicious activity. Hunt for unusual usage in your enivornment.</td>
+     <td>7za.exe</td>	<td>Tool</td><td>Compression app (command line)</td><td>Pivote/Escalate</td>
      <td><a target="_blank" href="https://attack.mitre.org/techniques/T1027/">T1027</a></td>
  </tr>
  <tr>
     <td></td>
     <td>adexplorer.exe<br>adexplorer64.exe<br>adexplorer64a.exe</td>
     <td>Tool</td>
-    <td>Sysinternls Active Directory Explorer.</td>
-    <td></td>
+    <td>Sysinternals Active Directory Explorer.</td>
+    <td>Discovery</td>
     <td></td>
 </tr>
 
  <tr>
     <td></td>
-    <td>adFind.exe</td><td>LOLbin</td>	<td>Command line Active Directory tool.</td><td>Used to enumerate domain users, groups, organizational units, etc.</td>	
+    <td>adFind.exe</td><td>LOLbin</td>	<td>Command line Active Directory tool.</td><td>Discovery</td>	
      <td><a target="_blank" href="https://attack.mitre.org/techniques/T1087">T1087</a><br>
         <a target="_blank" href="https://attack.mitre.org/techniques/T1482">T1482</a><Br> 
         <a target="_blank" href="https://attack.mitre.org/techniques/T1069">T1069</a><br> 
@@ -56,8 +62,8 @@
     <td></td>
     <td>anydesk.exe</td>
     <td>Tool</td>
-    <td>Remote access utility</td>
-    <td>Some threat groups use for remote access to a compromised organization.</td>
+    <td>Used for remote access to a compromised organization.</td>
+    <td>Intrusion / Lateral movment</td>
     <td></td>
 </tr>
 
@@ -65,8 +71,8 @@
     <td></td>
     <td>arp.exe</td>
     <td>LOLbin</td>
-    <td>Display info about Address Resolution Protocol</td>
-    <td>Commonly used by Windows OS, mostly under "machine" account type. User use is unusual. Hung for "arp -a".</td>
+    <td>Commonly used by Windows OS, mostly under "machine" account type. User use is unusual. Hunt for "arp -a".</td>
+    <td>Discovery</td>
     <td></td>
 </tr>
 
@@ -74,9 +80,8 @@
     <td></td>
     <td>bitsadmin.exe</td>
     <td>LOLbin</td>
-    <td>Microsoft console utility.</td>
-    <td>A command-line tool that you can use to create download or upload jobs and monitor their progress.
-    </td>
+    <td>A command-line tool that you can use to create download or upload jobs and monitor their progress.</td>
+    <td>C2 / Exfiltration    </td>
     <td></td>
 </tr>
 
@@ -84,33 +89,33 @@
     <td></td>
     <td>chcp.exe</td>
     <td>LOLbin</td>
-    <td>Microsoft console utility.</td>
     <td>Changes the active console code page. If used without parameters, chcp displays the number of the active console code page.</td>
+    <td>Discovery</td>
     <td></td>
 </tr>
 <tr>
     <td></td>
     <td>CrackMapExec.py</td>
     <td>Tool</td>
-    <td>Python utility</td>
     <td>Collects Active Directory information, brute forces AD accounts, executes Powershell, enumerate shares, dump password hashes and more.</td>
+    <td>Pivot / Escalate</td>
     <td><a target="_blank" href = https://attack.mitre.org/software/S0488/">Numerous techniques</a></td>
 </tr>
 <tr>
     <td></td>
     <td>curl.exe</td>
     <td>LOLbin</td>
-    <td>Used for HTTP, HTTPS, FTP at the command line</td>
     <td>Download files (malicious) from the command line</td>
+    <td>Pivot / Escalate</td>
     <td></td>
 </tr>
 
 <tr>
     <td></td>
     <td>dsquery.exe</td>
-    <td>LOLbin</td>
-    <td>Microsoft Active Diretory tool</td>
+    <td>LOLbin</td>    
     <td>dsquery is a command-line utility that can be used to query Active Directory for information from a system within a domain.</td>
+    <td>Discovery</td>
     <td><a target="_blank" href="https://attack.mitre.org/techniques/T1087">T1087</a> <br>
         <a target="_blank" href="https://attack.mitre.org/techniques/T1482">T1482</a> <br>
         <a target="_blank" href="https://attack.mitre.org/techniques/T1069">T1069</a>
@@ -121,7 +126,7 @@
     <td>eqnedt.exe</td>
     <td>LOLbin</td>
     <td>Microsoft Equation Editor</td>
-    <td>Vulnerable if unpatched</td>
+    <td>Initial Compromise</td>
     <td></td>
 </tr>
 
@@ -129,8 +134,9 @@
     <td></td>
     <td>keytool.exe</td>
     <td>Tool</td>
-    <td>Java Platform tool for certificate management</td>
-    <td>Used maliciously to generate a certificate request or import certificates. Some malicious software uses the name "keytool.exe" for their own software</td>
+    <td>Java platform used maliciously to generate a certificate request or import certificates. Some malicious software uses the name "keytool.exe" for their own software</td>
+    <td>Pivote / Escalate</td>
+
     <td></td>
 </tr>
 
@@ -139,7 +145,7 @@
     <td>mimikatz.exe</td>
     <td>Tool</td>
     <td>Credential dumper</td>
-    <td>Execution likely to be noticed by EDR</td>
+    <td>Pivot / Escalate</td>
     <td>numerous</td>
 </tr>
 
@@ -148,7 +154,7 @@
     <td>nbtscan.exe</td>
     <td>Tool</td>
     <td>Scan/recon for a network</td>
-    <td>Network and host discovery</td>
+    <td>Discovery</td>
     <td></td>
 </tr>
 
@@ -156,8 +162,8 @@
         <td></td>
         <td>net.exe</td>
         <td>LOLbin</td>
-        <td>The Net utility is a component of the Windows operating system. It is used in command-line operations for control of users, groups, services, and network connections.</td>
-        <td>Most useful threat hunting strings to search for are: "net.exe config" "net.exe group" "net.exe user" "net.exe view"</td>
+        <td>The Net utility is a component of the Windows operating system. It is used in command-line operations for control of users, groups, services, and network connections. Most useful threat hunting strings to search for are: "net.exe config" "net.exe group" "net.exe user" "net.exe view"</td>
+        <td>Discovery</td>
         <td>numerous</td>
     </tr>
     <tr>
@@ -165,7 +171,7 @@
         <td>netscan.exe</td>
         <td>Tool</td>
         <td>Scan/recon for a network</td>
-        <td>Network and host discovery</td>
+        <td>Discovery</td>
         <td></td>
     </tr>
     <tr>
@@ -173,7 +179,7 @@
         <td>netstat.exe</td>
         <td>LOLbin</td>
         <td>View network connections for a local host</td>
-        <td>Hunt for unusual activty, like many subsequent uses.</td>
+        <td>Discovery</td>
         <td></td>
     </tr>
 <tr>
@@ -181,7 +187,7 @@
     <td>ngrok.exe</td>
     <td>Tool</td>
     <td>Reverse proxy tool</td>
-    <td>Provides secure tunnel to Internet</td>
+    <td>Persistence</td>
     <td><a target="_blank" href="https://attack.mitre.org/techniques/T1046">T1046</a> <br>
         <a target="_blank" href="https://attack.mitre.org/techniques/T1040">T1040</a><br>
         <a target="_blank" href="https://attack.mitre.org/techniques/T1018M">T1018M</a><br>
@@ -193,8 +199,8 @@
     <td></td>
     <td>nltest.exe</td>
     <td>LOLbin</td>
-    <td>Command line domain tool</td>
-    <td>List domain controllers and enumerate trusts.</td>
+    <td>Command line domain tool - List domain controllers and enumerate trusts.</td>
+    <td>Discovery</td>
     <td></td>
 </tr>
 
@@ -202,16 +208,16 @@
     <td></td>
     <td>nmap.exe</td>
     <td>Tool</td>
-    <td>Network mapper</td>
-    <td>Network discovery, host discovery, open ports, etc.</td>
+    <td>Network mappyer</td>
+    <td>Discovery</td>
     <td></td>
  </tr>
    <tr>
         <td></td>
         <td>ntdsutil.exe</td>
         <td>LOLbin</td>
-        <td>Command Line tool for managing Active Directory</td>
-        <td>Possible to use this tool for enumerating AD accounts.</td>
+        <td>Command Line tool for managing Active Directory. Can be used to enumerate AD Accounts</td>
+        <td>Discovery</td>
         <td><a target="_blank" href="https://attack.mitre.org/versions/v10/techniques/T1003/003/">T1003.003</a></td>
     </tr>
     <tr>
@@ -219,7 +225,7 @@
         <td>pingcastle.exe</td>
         <td>Tool</td>
         <td>System, domain, network information</td>
-        <td>Recon / Discovery (Initial Access)</td>
+        <td>Discovery</td>
         <td></td>
     </tr>
     <tr>
@@ -227,7 +233,7 @@
         <td>plink.exe</td>
         <td>Tool</td>
         <td>Command line SSH client (PuTTy link)</td>
-        <td>APT28, UNC757, UNC2448</td>
+        <td>Pivot / Escalate</td>
         <td></td>
     </tr>
     <tr>
@@ -235,7 +241,7 @@
         <td>procexp.exe<br>procexp64.exe<br>procexp64a.exe</td>
         <td>Tool</td>
         <td>Sysinternls Process Explorer.</td>
-        <td></td>
+        <td>Discovery</td>
         <td></td>
     </tr>
     <tr>
@@ -243,7 +249,7 @@
         <td>processhacker.exe</td>
         <td>Tool</td>
         <td>Open source tool to see running processes in Windows.  </td>
-        <td>Copy cat of Sysinternls Process Explorer.</td>
+        <td>Discovery</td>
         <td></td>
     </tr>
     <tr>
@@ -251,7 +257,7 @@
         <td>psexec.exe</td>
         <td>Tool</td>
         <td>Remote execution command line tool</td>
-        <td>A free Microsoft tool that can be used to execute a program on another computer. Sysinternals</td>
+        <td></td>
         <td><a target="_blank" href="https://attack.mitre.org/techniques/T1136">T1136</a><br>
             <a target="_blank" href="https://attack.mitre.org/techniques/T1543">T1543</a><br>
             <a target="_blank" href="https://attack.mitre.org/techniques/T1570">T1570</a><br> 
@@ -263,7 +269,7 @@
         <td>pskill.exe<br>pskill64.exe</td>
         <td>Tool</td>
         <td>Sysinternals tool</td>
-        <td>Terminates a local process</td>
+        <td>Pivot / Escalate</td>
         <td></td>
     </tr>
 
@@ -272,7 +278,7 @@
         <td>putty.exe</td>
         <td>Tool</td>
         <td>SSH client</td>
-        <td></td>
+        <td>Persistence /td>
         <td></td>
     </tr>
     <tr>
@@ -280,15 +286,15 @@
         <td>pwdump.exe</td>
         <td>Tool</td>
         <td>Credential dumper</td>
-        <td></td>
+        <td>Pivot / Escalate</td>
         <td></td>
     </tr>
     <tr>
         <td></td>
         <td>query.exe</td>
         <td>LOLbin</td>
-        <td></td>
         <td>Displays information about user sessions on a Remote Desktop Session Host server</td>
+        <td>Discovery</td>
         <td></td>
     </tr>
     <tr>
@@ -296,7 +302,7 @@
         <td>radmin.exe</td>
         <td>Tool</td>
         <td>Remote software</td>
-        <td>Used by various threat actors for remote access</td>
+        <td>Persistence</td>
         <td><a target="_blank" href="https://attack.mitre.org/techniques/T1072/">T1072</a></td>
     </tr>
       <tr>
@@ -312,16 +318,16 @@
         <td></td>
         <td>rclone.exe</td>
         <td>Tool</td>
-        <td>Command line tool</td>
-        <td>Used to manage cloud storage</td>
+        <td>Command line tool to manage cloud storage</td>
+        <td>C2 / Data Exfiltration</td>
         <td></td>
     </tr>
     <tr>
         <td></td>
         <td>ScreenConnect.WindowsClient.exe</td>
         <td>Tool</td>
-        <td></td>
         <td>Remote access tool (remote desktop)</td>
+        <td>Persistence</td>
         <td></td>
     </tr>
     <tr>
@@ -329,7 +335,15 @@
         <td>sharphound.exe</td>
         <td>Recon tool</td>
         <td>Active Directory collector for Bloodhound</td>
-        <td><a target="_blank" href="https://bloodhound.readthedocs.io/en/latest/data-collection/sharphound.html">https://bloodhound.readthedocs.io/en/latest/data-collection/sharphound.html</a></td>
+        <td>Discovery</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>sqlps.exe</td>
+        <td>LOLbin</td>
+        <td>Execute SQL Server PowerShell cmdlets</td>
+        <td>Pivote / Escalate</td>
         <td></td>
     </tr>
     <tr>
@@ -337,7 +351,7 @@
         <td>systeminfo.exe</td>
         <td>LOLbin</td>
         <td>Command line tool to display system information.</td>
-        <td>An adversary may attempt to get detailed information about the operating system and hardware, including version, patches, hotfixes, service packs, and architecture.</td>
+        <td>Discovery</td>
         <td><a target="_blank" href="https://attack.mitre.org/techniques/T1082/">T1082</a></td>
         
     </tr>
@@ -345,8 +359,8 @@
         <td></td>
         <td>smbexec.py</td>
         <td>Tool</td>
-        <td>Python tool to execute commands in a stealthy manner. </td>
-        <td>Transfers commands from the attacker's machine to the target Windows machine via SMB.  Uses %TEMP%/execute.bat.</td>
+        <td>Python tool to execute commands in a stealthy manner.  Transfers commands from the attacker's machine to the target Windows machine via SMB.  Uses %TEMP%/execute.bat. </td>
+        <td>Pivote / Escalate</td>
         <td></a></td>
     </tr>
     <tr>
@@ -354,7 +368,7 @@
         <td>vnc.exe</td>
         <td>Tool</td>
         <td>Remote desktop software</td>
-        <td>Common adversarial tool</td>
+        <td>Persistence</td>
         <td><a target="_blank" href="https://attack.mitre.org/techniques/T1021/">T1021</a> <br>
             <a target="_blank" href="https://attack.mitre.org/techniques/T1133/">T1133</a> <br>
             <a target="_blank" href="https://attack.mitre.org/techniques/T1219/">T1219</a> <br>
@@ -366,7 +380,7 @@
         <td>vssadmin.exe</td>
         <td>LOLbin</td>
         <td>Display the current volume shadow copy backups and all installed shadow copy writers and providers.</td>
-        <td></td>
+        <td>Discovery</td>
         <td><a target="_blank" href="https://attack.mitre.org/techniques/T1490/">T1490</a></td>
     </tr>
 
@@ -375,7 +389,7 @@
         <td>wget.exe</td>
         <td>Tool</td>
         <td>Used for HTTP, HTTPS, FTP at the command line</td>
-        <td>Download files (malicious) from the command line</td>
+        <td>Pivote / Escalate</td>
         <td></td>
     </tr>
 
@@ -383,8 +397,8 @@
         <td></td>
         <td>whoami.exe</td>
         <td>LOLbin</td>
-        <td></td>
         <td>Command line to see interactive user, group memberships, privileges, etc</td>
+        <td>Discovery</td>
         <td></td>
     </tr>
 
@@ -393,15 +407,15 @@
         <td>wireshark.exe</td>
         <td>Tool</td>
         <td>Network packet sniffer</td>
-        <td>Capture and filter PCAPs on a network</td>
+        <td>Discovery</td>
         <td></td>
     </tr>
     <tr>
         <td></td>
         <td>wmic.exe</td>
         <td>LOLbin</td>
-        <td>Windows Management Instrumentation (command line)</td>
-        <td>Commonly used by machine accounts; threat hunting should focus on user activity</td>
+        <td>Windows Management Instrumentation (command line). Hunt for usage by interactive user.</td>
+        <td></td>
         <td><a target="_blank" href="https://attack.mitre.org/techniques/T1047/">T1047</a></td>
     </tr>
 
