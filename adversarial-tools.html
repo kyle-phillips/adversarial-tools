@@ -87,6 +87,15 @@
 
 <tr>
     <td></td>
+    <td>cacls.exe</td>
+    <td>LOLbin</td>
+    <td>Depracated tool to display/modify access control for Windows files & folders.  </td>
+    <td>Pivot / Escalate</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td></td>
     <td>chcp.exe</td>
     <td>LOLbin</td>
     <td>Changes the active console code page. If used without parameters, chcp displays the number of the active console code page.</td>
@@ -132,6 +141,15 @@
 
 <tr>
     <td></td>
+    <td>icacls.exe</td>
+    <td>LOLbin</td>
+    <td>Tool to display/modify access control for Windows files & folders. Used by Ryuk, Trickbot, WannaCry and more  </td>
+    <td>Pivot / Escalate</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td></td>
     <td>keytool.exe</td>
     <td>Tool</td>
     <td>Java platform used maliciously to generate a certificate request or import certificates. Some malicious software uses the name "keytool.exe" for their own software</td>
@@ -147,6 +165,15 @@
     <td>Credential dumper</td>
     <td>Pivot / Escalate</td>
     <td>numerous</td>
+</tr>
+
+<tr>
+    <td></td>
+    <td>msiexec.exe</td>
+    <td>LOLbin</td>
+    <td>MSI Windows installer package. Commonly used by "admin" and "system". Threat hunt for interactive users. </td>
+    <td>Pivot / Escalate</td>
+    <td><a target="_blank" href="https://attack.mitre.org/techniques/T1218/007/">T1218</a></td>
 </tr>
 
 <tr>
@@ -230,7 +257,7 @@
     </tr>
     <tr>
         <td></td>
-        <td>plink.exe</td>
+        <td>plink.exe (aka ekern.exe)</td>
         <td>Tool</td>
         <td>Command line SSH client (PuTTy link)</td>
         <td>Pivot / Escalate</td>
@@ -278,7 +305,7 @@
         <td>putty.exe</td>
         <td>Tool</td>
         <td>SSH client</td>
-        <td>Persistence /td>
+        <td>Persistence </td>
         <td></td>
     </tr>
     <tr>
@@ -293,7 +320,7 @@
         <td></td>
         <td>query.exe</td>
         <td>LOLbin</td>
-        <td>Displays information about user sessions on a Remote Desktop Session Host server</td>
+        <td>Displays information about user sessions on a Remote Desktop Session Host server. "query.exe user" or "query.exe session" or "quser.exe"</td>
         <td>Discovery</td>
         <td></td>
     </tr>
@@ -320,6 +347,14 @@
         <td>Tool</td>
         <td>Command line tool to manage cloud storage</td>
         <td>C2 / Data Exfiltration</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>rpcdump.exe</td>
+        <td>LOLbin</td>
+        <td>Command line tool to query RPC endpoints</td>
+        <td>Discovery</td>
         <td></td>
     </tr>
     <tr>
@@ -363,6 +398,20 @@
         <td>Pivote / Escalate</td>
         <td></a></td>
     </tr>
+ 
+    <tr>
+        <td></td>
+        <td>tasklist.exe</td>
+        <td>LOLbin</td>
+        <td>Command line exe to show running processes. </td>
+        <td>Discovery</td>
+        <td>
+            <a target="_blank" href="https://attack.mitre.org/techniques/T1057/">T1057</a></ br>
+            <a target="_blank" href="https://attack.mitre.org/techniques/T1518/">T1518</a></ br>
+            <a target="_blank" href="https://attack.mitre.org/techniques/T1007/">T1007</a></ br>
+        </td>
+    </tr>
+ 
     <tr>
         <td></td>
         <td>vnc.exe</td>
