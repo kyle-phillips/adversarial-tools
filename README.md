@@ -2,7 +2,7 @@
 
 This is a working list of more than 50 tools (EXEs and scripts) used by adversaries in a cyber attack.  
 
-The creation of this list was born out of a desire to know what executables are running in your environment that you'd want to know about.  Use this list for threat hunting.  
+The creation of this list was born out of a desire to know what executables are running in our environment that we'd want to know about.  Use this list for threat hunting.  
 
 This list contains both LOLbins and software tools.
 
