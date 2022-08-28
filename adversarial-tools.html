@@ -24,15 +24,17 @@
 <title>Adversarial Tools</title>
 </head>
 
-<p>Common tools used by threat actors.  Use this list for threat hunting in your SIEM.</p>
+<p>Tools used by threat actors.  Use this list for threat hunting.</p>
 <table style="width:80%">
  <tr>
-     <th style="width:3%">#</th>
+     <th style="width:2%">#</th>
      <th style="width:12%">Name</th>
      <th style="width:10%">Type</th>
      <th style="width:31%">Description</th>
-     <th style="width:31%">Used For</th>
-     <th style="width:12%">MITRE ATT@ACK</th>
+     <th style="width:25%">Used For</th>
+     <th style="width:10%">MITRE ATT@ACK</th>
+     <th style="width:10%">AV Detect?</th>
+
  </tr>
  <tr>
      <td></td>
@@ -56,6 +58,15 @@
         <a target="_blank" href="https://attack.mitre.org/techniques/T1069">T1069</a><br> 
         <a target="_blank" href="https://attack.mitre.org/techniques/T1018">T1018</a><br> 
         <a target="_blank" href="https://attack.mitre.org/techniques/T1016">T1016</a></td>
+</tr>
+
+<tr>
+    <td></td>
+    <td>adplus.exe</td>
+    <td>LOLbin</td>
+    <td>Debugging tool included with Windows Debugging Tools.  Creates a memory dump of the lsass process. <br> adplus.exe -hang -pn lsass.exe -o c:\users\smith\Documents -quiet <br>  Can also run arbitrary commands and binaries with the "-sc" flag.</td>
+    <td>Intrusion / Lateral movment</td>
+    <td></td>
 </tr>
 
 <tr>
@@ -178,6 +189,15 @@
 
 <tr>
     <td></td>
+    <td>msra.exe</td>
+    <td>LOLbin</td>
+    <td>Microsoft Remote Assistance tool (used by Qakbot</td>
+    <td>Pivot / Escalate</td>
+    <td></td>
+</tr>
+
+<tr>
+    <td></td>
     <td>nbtscan.exe</td>
     <td>Tool</td>
     <td>Scan/recon for a network</td>
@@ -187,9 +207,9 @@
 
     <tr>
         <td></td>
-        <td>net.exe</td>
+        <td>net.exe </br>net1.exe</td>
         <td>LOLbin</td>
-        <td>The Net utility is a component of the Windows operating system. It is used in command-line operations for control of users, groups, services, and network connections. Most useful threat hunting strings to search for are: "net.exe config" "net.exe group" "net.exe user" "net.exe view"</td>
+        <td>The Net utility (also net1.exe) is a component of the Windows operating system. It is used in command-line operations for control of users, groups, services, and network connections. Most useful threat hunting strings to search for are: "net.exe config" "net.exe group" "net.exe user" "net.exe view"</td>
         <td>Discovery</td>
         <td>numerous</td>
     </tr>
@@ -261,6 +281,14 @@
         <td>Tool</td>
         <td>Command line SSH client (PuTTy link)</td>
         <td>Pivot / Escalate</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>procdump.exe<br>procdump64.exe<br>procdump64.exe</td>
+        <td>Tool</td>
+        <td>Sysinternls Process Dump</td>
+        <td>Discovery</td>
         <td></td>
     </tr>
     <tr>
@@ -401,6 +429,17 @@
  
     <tr>
         <td></td>
+        <td>taskkill.exe</td>
+        <td>LOLbin</td>
+        <td>Ends one or more tasks or Windows processes. Processes can be ended by process ID or image name. </td>
+        <td>Pivote / Escalate </td>
+        <td>
+           
+        </td>
+    </tr>
+
+    <tr>
+        <td></td>
         <td>tasklist.exe</td>
         <td>LOLbin</td>
         <td>Command line exe to show running processes. </td>
@@ -438,8 +477,17 @@
         <td>wget.exe</td>
         <td>Tool</td>
         <td>Used for HTTP, HTTPS, FTP at the command line</td>
-        <td>Pivote / Escalate</td>
+        <td>Pivot / Escalate</td>
         <td></td>
+    </tr>
+
+    <tr>
+        <td></td>
+        <td>wevtutil.exe</td>
+        <td>LOLbin</td>
+        <td>Enables you to retrieve information about event logs and publishers, including the ability to clear logs.</td>
+        <td>Pivot / Escalate</td>
+        <td><a target="_blank" href="https://attack.mitre.org/techniques/T1005/">T1005</a> <br> <a target="_blank" href="https://attack.mitre.org/techniques/T1562/">T1562</a> <br> <a target="_blank" href="https://attack.mitre.org/techniques/T1070/ ">T1070</a></td>
     </tr>
 
     <tr>
