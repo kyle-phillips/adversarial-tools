@@ -244,7 +244,7 @@
         <td>netsh.exe</td>
         <td>LOLbin</td>
         <td>Network shell - used to discover or change Windows firewall settings. Used as a proxy tunnel. </td>
-        <td>Persistence</td>
+        <td>Persistence/Escalate</td>
         <td><a target="_blank" href="https://attack.mitre.org/techniques/T1546">T1546</a> <br>
             <a target="_blank" href="https://attack.mitre.org/techniques/T1562">T1562</a></td>
     </tr>
@@ -310,6 +310,16 @@
         <td>Pivot / Escalate</td>
         <td></td>
     </tr>
+
+    <tr>
+        <td></td>
+        <td>powershell.exe</td>
+        <td>LOLbin</td>
+        <td>Microsoft PowerShell. Threat hunt for specific uses of powershell such as spawning cmd.exe, or disabling Defender, powershell.exe Uninstall-WindowsFeature -Name Windows-Defender-GUI </td>
+        <td>Pivot / Escalate</td>
+        <td></td>
+    </tr>
+
     <tr>
         <td></td>
         <td>procdump.exe<br>procdump64.exe<br>procdump64.exe</td>
@@ -414,6 +424,14 @@
     </tr>
     <tr>
         <td></td>
+        <td>sc.exe</td>
+        <td>LOLbin</td>
+        <td>Command line for communicating with Windows Service Control Manager.  Can disable services (with admin privileges) </td>
+        <td>Persistence</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td></td>
         <td>ScreenConnect.WindowsClient.exe</td>
         <td>Tool</td>
         <td>Remote access tool (remote desktop)</td>
@@ -480,6 +498,16 @@
  
     <tr>
         <td></td>
+        <td>ver.exe</td>
+        <td>LOLbin</td>
+        <td>Command line exe to show Windows version. </td>
+        <td>Discovery</td>
+        <td>
+        </td>
+    </tr>
+
+    <tr>
+        <td></td>
         <td>vnc.exe</td>
         <td>Tool</td>
         <td>Remote desktop software</td>
@@ -512,7 +540,7 @@
         <td></td>
         <td>wevtutil.exe</td>
         <td>LOLbin</td>
-        <td>Enables you to retrieve information about event logs and publishers, including the ability to clear logs.</td>
+        <td>Enables retreival of event logs as well as the ability to clear logs (-cl parameter).</td>
         <td>Pivot / Escalate</td>
         <td><a target="_blank" href="https://attack.mitre.org/techniques/T1005/">T1005</a> <br> <a target="_blank" href="https://attack.mitre.org/techniques/T1562/">T1562</a> <br> <a target="_blank" href="https://attack.mitre.org/techniques/T1070/ ">T1070</a></td>
     </tr>
