@@ -223,11 +223,20 @@
     <td></td>
 </tr>
 
+<tr>
+        <td></td>
+        <td>nbtstat.exe</td>
+        <td>LOLbin</td>
+        <td>Displays protocol statistics and current TCP/IP connections using NetBIOS</td>
+        <td>Discovery</td>
+        <td></td>
+</tr>
+ 
     <tr>
         <td></td>
         <td>net.exe </br>net1.exe</td>
         <td>LOLbin</td>
-        <td>The Net utility (also net1.exe) is a component of the Windows operating system. It is used in command-line operations for control of users, groups, services, and network connections. Most useful threat hunting strings to search for are: "net.exe config" "net.exe group" "net.exe user" "net.exe view"</td>
+        <td>The Net utility (also net1.exe) is a component of the Windows operating system. It is used in command-line operations for control of users, groups, services, and network connections. Useful threat hunting strings to search for are: "net config" "net group" "net user" "net view"</td>
         <td>Discovery</td>
         <td>numerous</td>
     </tr>
@@ -273,7 +282,7 @@
     <td></td>
     <td>nltest.exe</td>
     <td>LOLbin</td>
-    <td>Command line domain tool - List domain controllers and enumerate trusts.</td>
+    <td>Command line domain tool - List domain controllers and enumerate trusts. Hunt for /domain_trust and /dclist:</td>
     <td>Discovery</td>
     <td></td>
 </tr>
@@ -315,7 +324,7 @@
         <td></td>
         <td>powershell.exe</td>
         <td>LOLbin</td>
-        <td>Microsoft PowerShell. Threat hunt for specific uses of powershell such as spawning cmd.exe, or disabling Defender, powershell.exe Uninstall-WindowsFeature -Name Windows-Defender-GUI </td>
+        <td>Microsoft PowerShell. Threat hunt for specific uses of powershell such as spawning cmd.exe, or disabling Defender, "powershell.exe Uninstall-WindowsFeature -Name Windows-Defender-GUI" </td>
         <td>Pivot / Escalate</td>
         <td></td>
     </tr>
