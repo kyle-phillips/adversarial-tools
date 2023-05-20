@@ -33,7 +33,7 @@
      <th style="width:31%">Description</th>
      <th style="width:25%">Used For</th>
      <th style="width:10%">MITRE ATT@ACK</th>
-     <th style="width:10%">AV Detect?</th>
+     <th style="width:10%">LOLBAS</th>
 
  </tr>
  <tr>
@@ -66,7 +66,8 @@
     <td>LOLbin</td>
     <td>Debugging tool included with Windows Debugging Tools.  Creates a memory dump of the lsass process. <br> adplus.exe -hang -pn lsass.exe -o c:\users\smith\Documents -quiet <br>  Can also run arbitrary commands and binaries with the "-sc" flag.</td>
     <td>Intrusion / Lateral movment</td>
-    <td></td>
+    <td><a target="_blank" href="https://attack.mitre.org/techniques/T1127">T1127</a><br>
+        <a target="_blank" href="https://attack.mitre.org/techniques/T11003/001">T1003.001</a><br>
     <td><a target="_blank" href="https://lolbas-project.github.io/lolbas/OtherMSBinaries/Adplus/">LOLBAS</a></td>
 </tr>
 
@@ -92,9 +93,13 @@
     <td></td>
     <td>bitsadmin.exe</td>
     <td>LOLbin</td>
-    <td>A command-line tool that you can use to create download or upload jobs and monitor their progress.</td>
-    <td>C2 / Exfiltration    </td>
-    <td></td>
+    <td>A command-line tool that can be used to download, copy files, execute other programs.</td>
+    <td>Pivot / Escalte   </td>
+    <td><a target="_blank" href="https://attack.mitre.org/techniques/T1564/004">T1564.004</a><br>
+        <a target="_blank" href="https://attack.mitre.org/techniques/T1105">T1105</a><br>
+        <a target="_blank" href="https://attack.mitre.org/techniques/T1218">T1218</a>
+        </td>
+    <td><a target="_blank" href="https://lolbas-project.github.io/lolbas/Binaries/Bitsadmin/">LOLBAS</a><br></td>
 </tr>
 
 <tr>
@@ -140,6 +145,17 @@
     <td>Pivot / Escalate</td>
     <td></td>
 </tr>
+<tr>
+    <td></td>
+    <td>dotnet.exe</td>
+    <td>LOLbin</td>
+    <td>Will execute and DLL, even if AppLocker enabled.</td>
+    <td>Pivot / Escalate</td>
+    <td><a target="_blank" href="https://attack.mitre.org/techniques/T1218">T1218</a><br>
+        <a target="_blank" href="https://attack.mitre.org/techniques/T1059">T1059</a>
+    </td>
+    <td><a target="_blank" href="https://lolbas-project.github.io/lolbas/OtherMSBinaries/Dotnet/">LOLBAS</a><br></td>
+</tr>
 
 <tr>
     <td></td>
@@ -176,7 +192,8 @@
     <td>LOLbin</td>
     <td>Microsoft IME Open Extended Dictionary Module - can be used to download files</td>
     <td>Pivot / Escalate</td>
-    <td><a target="_blank" href="https://attack.mitre.org/techniques/T1105">T1105</td>
+    <td><a target="_blank" href="https://attack.mitre.org/techniques/T1105">T1105</a></td>
+    <td><a target="_blank" href="https://lolbas-project.github.io/lolbas/Binaries/IMEWDBLD/">LOLBAS</a></td>
 </tr>
 
 <tr>
@@ -204,16 +221,20 @@
     <td>LOLbin</td>
     <td>Windows Defender management utility.  Can be used to download and install software (Lockbit). Threat hunt for interactive user.</td>
     <td>Initial Compromise</td>
-    <td></td>
+    <td><a target="_blank" href="https://attack.mitre.org/techniques/T1105">T1105</a><br>
+        <a target="_blank" href="https://attack.mitre.org/techniques/T1564/004">T1564.004</a>
+        </td>
+    <td><a target="_blank" href="https://lolbas-project.github.io/lolbas/Binaries/MpCmdRun/">LOLBAS</a><br></td>
 </tr>
 
 <tr>
     <td></td>
     <td>msiexec.exe</td>
     <td>LOLbin</td>
-    <td>MSI Windows installer package. Commonly used by "admin" and "system". Threat hunt for interactive user.</td>
+    <td>MSI Windows installer package that can be used to silently install under "User" privileges. Can register/de-register DLLs. Threat hunt for interactive user.</td>
     <td>Pivot / Escalate</td>
-    <td><a target="_blank" href="https://attack.mitre.org/techniques/T1218/007/">T1218</a></td>
+    <td><a target="_blank" href="https://attack.mitre.org/techniques/T1218/007/">T1218.007</a><br>
+    <td><a target="_blank" href="https://lolbas-project.github.io/lolbas/Binaries/Msiexec/">LOLBAS</a></td>
 </tr>
 
 <tr>
@@ -263,10 +284,11 @@
         <td></td>
         <td>netsh.exe</td>
         <td>LOLbin</td>
-        <td>Network shell - used to discover or change Windows firewall settings. Used as a proxy tunnel. </td>
+        <td>Network shell - used to discover or change Windows firewall settings, act as a proxy tunnel or maniupate network interface settings. </td>
         <td>Persistence/Escalate</td>
-        <td><a target="_blank" href="https://attack.mitre.org/techniques/T1546">T1546</a> <br>
+        <td><a target="_blank" href="https://attack.mitre.org/techniques/T1546/007">T1546.007</a> <br>
             <a target="_blank" href="https://attack.mitre.org/techniques/T1562">T1562</a></td>
+        <td><a target="_blank" href="https://lolbas-project.github.io/lolbas/Binaries/Netsh/">LOLBAS</a></td>
     </tr>
     <tr>
         <td></td>
@@ -310,9 +332,10 @@
         <td></td>
         <td>ntdsutil.exe</td>
         <td>LOLbin</td>
-        <td>Command Line tool for managing Active Directory. Can be used to enumerate AD Accounts</td>
+        <td>Command Line tool for managing Active Directory. Can be used to enumerate AD Accounts, or export AD information.</td>
         <td>Discovery</td>
         <td><a target="_blank" href="https://attack.mitre.org/versions/v10/techniques/T1003/003/">T1003.003</a></td>
+        <td><a target="_blank" href="https://lolbas-project.github.io/lolbas/OtherMSBinaries/Ntdsutil/">LOLBAS</a></td>
     </tr>
     <tr>
         <td></td>
@@ -436,11 +459,25 @@
     </tr>
     <tr>
         <td></td>
+        <td>reg.exe</td>
+        <td>LOLbin</td>
+        <td>Command line to manipulate the registry, and dump registry hives</td>
+        <td>Persistence</td>
+        <td><a target="_blank" href="https://attack.mitre.org/techniques/T1003/002/">T1003.002</a><br>
+            <a target="_blank" href="https://attack.mitre.org/techniques/T1564/004/">T1564.004</a>
+            </td>
+        <td><a target="_blank" href="https://lolbas-project.github.io/lolbas/Binaries/Reg/">LOLBAS</a></td>    
+    </tr>
+    <tr>
+    <tr>
+        <td></td>
         <td>regsvr32.exe</td>
         <td>LOLbin</td>
         <td>Register a DLL in a Windows system</td>
         <td>Persistence</td>
         <td><a target="_blank" href="https://attack.mitre.org/techniques/T1218/010/">T1218.010</a></td>
+        <td><a target="_blank" href="https://lolbas-project.github.io/lolbas/Binaries/Regsvr32/">LOLBAS</a></td>
+
     </tr>
     <tr>
         <td></td>
@@ -452,11 +489,23 @@
     </tr>
     <tr>
         <td></td>
+        <td>rpcping.exe</td>
+        <td>LOLbin</td>
+        <td>Credential dumping, and forced authentication</td>
+        <td>Escalate</td>
+        <td><a target="_blank" href="https://attack.mitre.org/techniques/T1003/">T1003</a><br>
+            <a target="_blank" href="https://attack.mitre.org/techniques/T1187/">T1187</a></td>
+        <td><a target="_blank" href="https://lolbas-project.github.io/lolbas/Binaries/Rpcping/">LOLBAS</a></td>
+    </tr>
+    <tr>
+        <td></td>
         <td>rundll32.exe</td>
         <td>LOLbin</td>
         <td>Used for execution bypass, credential theft, DLL registration</td>
         <td>Escalate / Persistence</td>
-        <td><a target="_blank" href="https://attack.mitre.org/techniques/T1218/011/">T1218.011</a></td>
+        <td><a target="_blank" href="https://attack.mitre.org/techniques/T1218/011/">T1218.011</a><br>
+            <a target="_blank" href="https://attack.mitre.org/techniques/T1564/004/">T1564.004</a></td>
+        <td><a target="_blank" href="https://lolbas-project.github.io/lolbas/Binaries/Rundll32/">LOLBAS</a></td>
     </tr>
 
     <tr>
@@ -465,7 +514,17 @@
         <td>LOLbin</td>
         <td>Command line for communicating with Windows Service Control Manager.  Can disable services (with admin privileges) </td>
         <td>Persistence</td>
+        <td><a target="_blank" href="https://attack.mitre.org/techniques/T1564/004/">T1564.004</a></td>
+        <td><a target="_blank" href="https://lolbas-project.github.io/lolbas/Binaries/Sc/">LOLBAS</a></td>
+    </tr>
+    <tr>
         <td></td>
+        <td>schtasks.exe</td>
+        <td>LOLbin</td>
+        <td>Create scheduled tasks with standard privileges </td>
+        <td>Persistence</td>
+        <td><a target="_blank" href="https://attack.mitre.org/techniques/T1053/005">T1053.005</a></td>
+        <td><a target="_blank" href="https://lolbas-project.github.io/lolbas/Binaries/Schtasks/">LOLBAS</a></td>
     </tr>
     <tr>
         <td></td>
@@ -485,11 +544,13 @@
     </tr>
     <tr>
         <td></td>
-        <td>sqlps.exe</td>
+        <td>sqlps.exe<br>sqltoolps.exe</td>
         <td>LOLbin</td>
-        <td>Execute SQL Server PowerShell cmdlets</td>
+        <td>Execute SQL Server PowerShell cmdlets. SQLTOOLPS.EXE in SQL SERVER 2016.</td>
         <td>Pivote / Escalate</td>
-        <td></td>
+        <td><a target="_blank" href="https://attack.mitre.org/techniques/T1218">T1218</a></td>
+        <td><a target="_blank" href="https://lolbas-project.github.io/lolbas/OtherMSBinaries/Sqlps/">LOLBAS</a><br>
+            <a target="_blank" href="https://lolbas-project.github.io/lolbas/OtherMSBinaries/Sqltoolps/">LOLBAS</a></td>
     </tr>
     <tr>
         <td></td>
@@ -615,7 +676,10 @@
         <td>LOLbin</td>
         <td>Windows Management Instrumentation (command line). Hunt for usage by interactive user.</td>
         <td></td>
-        <td><a target="_blank" href="https://attack.mitre.org/techniques/T1047/">T1047</a></td>
+        <td><a target="_blank" href="https://attack.mitre.org/techniques/T1047/">T1047</a><br>
+            <a target="_blank" href="https://attack.mitre.org/techniques/T1218/">T1218</a><br>
+            <a target="_blank" href="https://attack.mitre.org/techniques/T1564/004/">T1564.004</a></td>
+        <td><a target="_blank" href="https://lolbas-project.github.io/lolbas/Binaries/Wmic/">LOLBAS</a></td>
     </tr>
     <tr>
         <td></td>
@@ -623,7 +687,8 @@
         <td>LOLbin</td>
         <td>Execute script code (javascript)</td>
         <td>Initial Access</td>
-        <td></td>
+        <td><a target="_blank" href="https://attack.mitre.org/techniques/T1564/004/">T1564.004</a></td>
+        <td><a target="_blank" href="https://lolbas-project.github.io/lolbas/Binaries/Wscript/">LOLBAS</a></td>
     </tr>
 
 </table>
