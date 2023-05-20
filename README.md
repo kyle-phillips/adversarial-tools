@@ -1,8 +1,8 @@
 # adversarial-tools
 
-This is a working list of more than 50 tools (EXEs and scripts) used by adversaries in a cyber attack.  
+This is a working list of nearly 75 common tactics and techniques (primarily LOLBins) used by adversaries in a cyber attack.  
 
-The creation of this list was born out of a desire to know what executables are running in our environment that we'd want to know about.  Use this list for threat hunting.  
+The creation of this list was born out of a desire to know what executables are running in our environment that we'd want to know about.  Use this list for threat hunting or incident response.  
 
 This list contains both LOLbins and software tools.
 
