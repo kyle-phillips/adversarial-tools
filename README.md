@@ -7,5 +7,5 @@ This list was created from real world attacks that have been publicly documented
 [View the list here](https://htmlpreview.github.io/?https://github.com/kyle-phillips/adversarial-tools/blob/main/adversarial-tools.html)
 
 Similiar resources to this one: https://lolbas-project.github.io/,  
-or Mitre's Software list for additional information, (https://attack.mitre.org/software/)https://attack.mitre.org/software/
+or Mitre's Software list for additional information, [https://attack.mitre.org/software/]https://attack.mitre.org/software/
 
