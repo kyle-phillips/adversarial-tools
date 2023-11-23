@@ -31,14 +31,14 @@
      <th style="width:12%">Name</th>
      <th style="width:10%">Type</th>
      <th style="width:31%">Description</th>
-     <th style="width:25%">Used For</th>
-     <th style="width:10%">MITRE ATT@ACK</th>
+     <th style="width:25%">ATT@ACK Tactic</th>
+     <th style="width:10%">ATT@ACK Technique</th>
      <th style="width:10%">LOLBAS</th>
 
  </tr>
  <tr>
      <td></td>
-     <td>7za.exe</td>	<td>Tool</td><td>Compression app (command line)</td><td>Pivote/Escalate</td>
+     <td>7za.exe</td>	<td>Tool</td><td>Compression app (command line)</td><td>Defensive Evasion <br> Exfiltration</td>
      <td><a target="_blank" href="https://attack.mitre.org/techniques/T1027/">T1027</a></td>
      <td>n/a</td>
  </tr>
@@ -67,7 +67,7 @@
     <td>adplus.exe</td>
     <td>LOLbin</td>
     <td>Debugging tool included with Windows Debugging Tools.  Creates a memory dump of the lsass process. <br> adplus.exe -hang -pn lsass.exe -o c:\users\smith\Documents -quiet <br>  Can also run arbitrary commands and binaries with the "-sc" flag.</td>
-    <td>Intrusion / Lateral movment</td>
+    <td>Credential Access <br> Privilege escalation <br> Lateral movement</td>
     <td><a target="_blank" href="https://attack.mitre.org/techniques/T1127">T1127</a><br>
         <a target="_blank" href="https://attack.mitre.org/techniques/T11003/001">T1003.001</a><br>
     <td><a target="_blank" href="https://lolbas-project.github.io/lolbas/OtherMSBinaries/Adplus/">LOLBAS</a></td>
@@ -78,7 +78,7 @@
     <td>anydesk.exe</td>
     <td>Tool</td>
     <td>Used for remote access to a compromised organization.</td>
-    <td>Intrusion / Lateral movment</td>
+    <td>Command and Control <br> Lateral movement</td>
     <td></td>
     <td>n/a</td>
 </tr>
@@ -97,7 +97,7 @@
     <td>bitsadmin.exe</td>
     <td>LOLbin</td>
     <td>A command-line tool that can be used to download, copy files, execute other programs.</td>
-    <td>Pivot / Escalte   </td>
+    <td>Exfiltration <BR> Execution <br> Command and Control   </td>
     <td><a target="_blank" href="https://attack.mitre.org/techniques/T1564/004">T1564.004</a><br>
         <a target="_blank" href="https://attack.mitre.org/techniques/T1105">T1105</a><br>
         <a target="_blank" href="https://attack.mitre.org/techniques/T1218">T1218</a>
@@ -110,7 +110,7 @@
     <td>cacls.exe</td>
     <td>LOLbin</td>
     <td>Depracated tool to display/modify access control for Windows files & folders.  </td>
-    <td>Pivot / Escalate</td>
+    <td>Privilege Escalation <br> Discovery </td>
     <td></td>
 </tr>
 
@@ -119,7 +119,7 @@
     <td>certutil.exe</td>
     <td>LOLbin</td>
     <td>Used for certificate management that can use used to download files from the Internet. Blocked by most EDR systems.</td>
-    <td>Pivot / Escalate</td>
+    <td>Defensive Evasion <br> Command and Control </td>
     <td><a target="_blank" href="hhttps://attack.mitre.org/techniques/T1105/">T1105</a></td></td>
     <td><a target="_blank" href="https://lolbas-project.github.io/lolbas/Binaries/Certutil/">LOLBAS</a></td>
 </tr>
@@ -137,7 +137,7 @@
     <td>CrackMapExec.py</td>
     <td>Tool</td>
     <td>Collects Active Directory information, brute forces AD accounts, executes Powershell, enumerate shares, dump password hashes and more.</td>
-    <td>Pivot / Escalate</td>
+    <td>Credential Access <br> Discovery <br> Execution <br> Privilege Escalation <br> Lateral Movement <br> Defensive Evasion</td>
     <td><a target="_blank" href = https://attack.mitre.org/software/S0488/">Numerous techniques</a></td>
     <td>n/a</td>
 </tr>
@@ -146,7 +146,7 @@
     <td>curl.exe</td>
     <td>LOLbin</td>
     <td>Download files (malicious) from the command line</td>
-    <td>Pivot / Escalate</td>
+    <td>Command and Control</td>
     <td></td>
 </tr>
 
@@ -155,7 +155,7 @@
     <td>dnscmd.exe</td>
     <td>LOLbin</td>    
     <td>Server only utility to manage DNS</td>
-    <td>Discovery</td>
+    <td>Discovery <br> Execution</td>
     <td><a target="_blank" href="https://attack.mitre.org/techniques/T1543/003">T1543.003</a> </td>
     <td><a target="_blank" href="https://lolbas-project.github.io/lolbas/Binaries/Dnscmd/">LOLBAS</a>
 </td>
@@ -165,9 +165,10 @@
     <td></td>
     <td>dotnet.exe</td>
     <td>LOLbin</td>
-    <td>Will execute and DLL, even if AppLocker enabled.</td>
-    <td>Pivot / Escalate</td>
-    <td><a target="_blank" href="https://attack.mitre.org/techniques/T1218">T1218</a><br>
+    <td>Will execute a DLL, even if AppLocker enabled.</td>
+    <td>Execution</td>
+    <td>
+        <a target="_blank" href="https://attack.mitre.org/techniques/T1218">T1218</a><br>
         <a target="_blank" href="https://attack.mitre.org/techniques/T1059">T1059</a>
     </td>
     <td><a target="_blank" href="https://lolbas-project.github.io/lolbas/OtherMSBinaries/Dotnet/">LOLBAS</a><br></td>
@@ -190,7 +191,7 @@
     <td>eqnedt.exe</td>
     <td>LOLbin</td>
     <td>Microsoft Equation Editor</td>
-    <td>Initial Compromise</td>
+    <td>Initial Access</td>
     <td></td>
 </tr>
 
@@ -199,7 +200,7 @@
     <td>expand.exe</td>
     <td>LOLbin</td>
     <td>Used to expand compressed files. Can also be used to move or copy files to a network share.</td>
-    <td>Lateral Movement</td>
+    <td>Lateral Movement <br> Defensive Evasion</td>
     <td><a target="_blank" href="https://attack.mitre.org/techniques/T1570">T1570</a></td>
     <td><a target="_blank" href="https://lolbas-project.github.io/lolbas/Binaries/Expand/">LOLBAS</a></td>
  </tr>
@@ -208,8 +209,8 @@
     <td></td>
     <td>icacls.exe</td>
     <td>LOLbin</td>
-    <td>Tool to display/modify access control for Windows files & folders. Used by Ryuk, Trickbot, WannaCry and more  </td>
-    <td>Pivot / Escalate</td>
+    <td>Tool to display/modify access control for Windows files & folders. Used by Ryuk, Trickbot, WannaCry and others  </td>
+    <td>Discovery <br> Privilege Escalation</td>
     <td></td>
     <td>n/a</td>
     </tr>
@@ -219,7 +220,7 @@
     <td>IMEWDBLD.exe</td>
     <td>LOLbin</td>
     <td>Microsoft IME Open Extended Dictionary Module - can be used to download files</td>
-    <td>Pivot / Escalate</td>
+    <td>Command and Control</td>
     <td><a target="_blank" href="https://attack.mitre.org/techniques/T1105">T1105</a></td>
     <td><a target="_blank" href="https://lolbas-project.github.io/lolbas/Binaries/IMEWDBLD/">LOLBAS</a></td>
 </tr>
@@ -229,7 +230,7 @@
     <td>keytool.exe</td>
     <td>Tool</td>
     <td>Java platform used maliciously to generate a certificate request or import certificates. Some malicious software uses the name "keytool.exe" for their own software</td>
-    <td>Pivote / Escalate</td>
+    <td>Credential Access <br> Defensive Evasion <br> Execution</td>
 
     <td></td>
     <td>n/a</td>
@@ -240,7 +241,7 @@
     <td>mimikatz.exe</td>
     <td>Tool</td>
     <td>Credential dumper</td>
-    <td>Pivot / Escalate</td>
+    <td>Privilege Escalation <br> Defensive Evasion <br> Credential Access <br> Persistence <br> Lateral Movement   </td>
     <td><a target="_blank" href="https://attack.mitre.org/software/S0002/">S0002</a></td>
     <td>n/a</td>
 </tr>
@@ -250,7 +251,7 @@
     <td>MpCmdRun.exe</td>
     <td>LOLbin</td>
     <td>Windows Defender management utility.  Can be used to download and install software (Lockbit). Threat hunt for interactive user.</td>
-    <td>Initial Compromise</td>
+    <td>Command and Control <br> Defensive Evasion </td>
     <td><a target="_blank" href="https://attack.mitre.org/techniques/T1105">T1105</a><br>
         <a target="_blank" href="https://attack.mitre.org/techniques/T1564/004">T1564.004</a>
         </td>
@@ -262,7 +263,7 @@
     <td>msiexec.exe</td>
     <td>LOLbin</td>
     <td>MSI Windows installer package that can be used to silently install under "User" privileges. Can register/de-register DLLs. Threat hunt for interactive user.</td>
-    <td>Pivot / Escalate</td>
+    <td>Execute/td>
     <td><a target="_blank" href="https://attack.mitre.org/techniques/T1218/007/">T1218.007</a><br>
     <td><a target="_blank" href="https://lolbas-project.github.io/lolbas/Binaries/Msiexec/">LOLBAS</a></td>
 </tr>
@@ -271,8 +272,8 @@
     <td></td>
     <td>msra.exe</td>
     <td>LOLbin</td>
-    <td>Microsoft Remote Assistance tool (used by Qakbot</td>
-    <td>Pivot / Escalate</td>
+    <td>Microsoft Remote Assistance tool </td>
+    <td>Initial Access <br> Command and Control </td>
     <td></td>
 </tr>
 
@@ -301,7 +302,7 @@
         <td>net.exe </br>net1.exe</td>
         <td>LOLbin</td>
         <td>The Net utility (also net1.exe) is a component of the Windows operating system. It is used in command-line operations for control of users, groups, services, and network connections. Useful threat hunting strings to search for are: "net config" "net group" "net user" "net view"</td>
-        <td>Discovery</td>
+        <td>Discovery <br> Persistence</td>
         <td>numerous</td>
     </tr>
     <tr>
@@ -318,7 +319,7 @@
         <td>netsh.exe</td>
         <td>LOLbin</td>
         <td>Network shell - used to discover or change Windows firewall settings, act as a proxy tunnel or maniupate network interface settings. </td>
-        <td>Persistence/Escalate</td>
+        <td>Persistence <br> Privilege Escalation <br> Defensive Evasion <br> Command and Control <br> Discovery </td>
         <td><a target="_blank" href="https://attack.mitre.org/techniques/T1546/007">T1546.007</a> <br>
             <a target="_blank" href="https://attack.mitre.org/techniques/T1562">T1562</a></td>
         <td><a target="_blank" href="https://lolbas-project.github.io/lolbas/Binaries/Netsh/">LOLBAS</a></td>
@@ -336,7 +337,7 @@
     <td>ngrok.exe</td>
     <td>Tool</td>
     <td>Reverse proxy tool</td>
-    <td>Persistence</td>
+    <td>Command and Control <br> Exfiltration <br> Persistence</td>
     <td><a target="_blank" href="https://attack.mitre.org/techniques/T1046">T1046</a> <br>
         <a target="_blank" href="https://attack.mitre.org/techniques/T1040">T1040</a><br>
         <a target="_blank" href="https://attack.mitre.org/techniques/T1018M">T1018M</a><br>
@@ -345,6 +346,7 @@
     </td>
     <td>n/a</td>
  </tr>
+
  <tr>
     <td></td>
     <td>nltest.exe</td>
@@ -352,9 +354,9 @@
     <td>Command line domain tool - List domain controllers and enumerate trusts. Hunt for /domain_trust and /dclist:</td>
     <td>Discovery</td>
     <td></td>
-</tr>
+ </tr>
 
-<tr>
+ <tr>
     <td></td>
     <td>nmap.exe</td>
     <td>Tool</td>
@@ -363,12 +365,13 @@
     <td></td>
     <td>n/a</td>
  </tr>
-   <tr>
+
+ <tr>
         <td></td>
         <td>ntdsutil.exe</td>
         <td>LOLbin</td>
         <td>Command Line tool for managing Active Directory. Can be used to enumerate AD Accounts, or export AD information.</td>
-        <td>Discovery</td>
+        <td>Discovery <br> Exfiltration </td>
         <td><a target="_blank" href="https://attack.mitre.org/versions/v10/techniques/T1003/003/">T1003.003</a></td>
         <td><a target="_blank" href="https://lolbas-project.github.io/lolbas/OtherMSBinaries/Ntdsutil/">LOLBAS</a></td>
     </tr>
@@ -378,7 +381,7 @@
         <td>pcwrun.exe</td>
         <td>LOLbin</td>    
         <td>Windows program compability wizard. Used for proxy execution of binaries.</td>
-        <td>Pivot / Escalate</td>
+        <td>Execute</td>
         <td>
             <a target="_blank" href="https://attack.mitre.org/techniques/T1218">T1218</a><br>
             <a target="_blank" href="https://attack.mitre.org/techniques/T1202">T1202</a>
@@ -400,7 +403,7 @@
         <td>plink.exe (aka ekern.exe)</td>
         <td>Tool</td>
         <td>Command line SSH client (PuTTy link)</td>
-        <td>Pivot / Escalate</td>
+        <td>Discovery <br>Execution <br>Exfiltration</td>
         <td></td>
         <td>n/a</td>
     </tr>
@@ -409,8 +412,14 @@
         <td></td>
         <td>powershell.exe</td>
         <td>LOLbin</td>
-        <td>Microsoft PowerShell. Threat hunt for specific uses of powershell such as spawning cmd.exe, or disabling Defender, "powershell.exe Uninstall-WindowsFeature -Name Windows-Defender-GUI" </td>
-        <td>Pivot / Escalate</td>
+        <td>Microsoft PowerShell. Threat hunt for specific uses of powershell:<br>
+            Spawning cmd.exe <br>
+            Disabling Defender: "powershell.exe Uninstall-WindowsFeature -Name Windows-Defender-GUI" <br>
+            Creating scheduled task: -New-ScheduleTaskAction, -Register-ScheduledTask, -New-ScheduledTaskTrigger <br>
+            Running unknown, unexpected or obfuscated scripts <br>
+            Get-MpComputerStatus (get status of AV/EDR)
+            </td>
+        <td>Discovery <br>Execution <br>Lateral Movement <br>Command and Control <br>Privilege Escalation<br> Initial Access<br>Credential Access</td>
         <td></td>
     </tr>
 
@@ -418,8 +427,8 @@
         <td></td>
         <td>procdump.exe<br>procdump64.exe<br>procdump64.exe</td>
         <td>Tool</td>
-        <td>Sysinternls Process Dump</td>
-        <td>Discovery</td>
+        <td>Sysinternls Process Dump. Can be used for lsass dump [-accepteula -ma lsass.exe out.dmp, or -accepteula -ma <PID> out.dmp]</td>
+        <td>Credential Access<br>Privilege Escalation</td>
         <td></td>
         <td>n/a</td>
     </tr>
@@ -446,7 +455,7 @@
         <td>psexec.exe</td>
         <td>Tool</td>
         <td>Remote execution command line tool</td>
-        <td></td>
+        <td>Lateral Movement<br>Execution<br></td>
         <td><a target="_blank" href="https://attack.mitre.org/techniques/T1136">T1136</a><br>
             <a target="_blank" href="https://attack.mitre.org/techniques/T1543">T1543</a><br>
             <a target="_blank" href="https://attack.mitre.org/techniques/T1570">T1570</a><br> 
@@ -460,19 +469,17 @@
         <td>pskill.exe<br>pskill64.exe</td>
         <td>Tool</td>
         <td>Sysinternals tool</td>
-        <td>Pivot / Escalate</td>
+        <td></td>
         <td></td>
         <td>n/a</td>
     </tr>
-
-
 
     <tr>
         <td></td>
         <td>putty.exe</td>
         <td>Tool</td>
         <td>SSH client</td>
-        <td>Persistence </td>
+        <td>Execution<br>Lateral Movement<br>Command and Control </td>
         <td></td>
         <td>n/a</td>
     </tr>
@@ -481,7 +488,7 @@
         <td>pwdump.exe</td>
         <td>Tool</td>
         <td>Credential dumper</td>
-        <td>Pivot / Escalate</td>
+        <td>Credential Access</td>
         <td></td>
         <td>n/a</td>
     </tr>
@@ -498,7 +505,7 @@
         <td>radmin.exe</td>
         <td>Tool</td>
         <td>Remote software</td>
-        <td>Persistence</td>
+        <td>Lateral Movement<br>Execution<br></td>
         <td><a target="_blank" href="https://attack.mitre.org/techniques/T1072/">T1072</a></td>
         <td>n/a</td>
     </tr>
@@ -507,7 +514,7 @@
         <td>rar.exe</td>
         <td>Tool</td>
         <td>Data compression software</td>
-        <td>Recently used by Russian threat actors</td>
+        <td>Defensive Evasion</td>
         <td><a target="_blank" href="https://attack.mitre.org/versions/v10/techniques/T1560/001/">T1560</a></td>
         <td>n/a</td>
     </tr>
@@ -517,7 +524,7 @@
         <td>rclone.exe</td>
         <td>Tool</td>
         <td>Command line software used for cloud storage management</td>
-        <td>C2 / Data Exfiltration</td>
+        <td>Command and Control<br>Data Exfiltration</td>
         <td></td>
     </tr>
     <tr>
@@ -525,7 +532,7 @@
         <td>reg.exe</td>
         <td>LOLbin</td>
         <td>Command line to manipulate the registry, and dump registry hives</td>
-        <td>Persistence</td>
+        <td>Persistence<br>Credential Access<br>Defensive Evasion</td>
         <td><a target="_blank" href="https://attack.mitre.org/techniques/T1003/002/">T1003.002</a><br>
             <a target="_blank" href="https://attack.mitre.org/techniques/T1564/004/">T1564.004</a>
             </td>
@@ -537,7 +544,7 @@
         <td>regsvr32.exe</td>
         <td>LOLbin</td>
         <td>Register a DLL in a Windows system</td>
-        <td>Persistence</td>
+        <td>Persistence<br>Execution<br>Defensive Evastion<br></td>
         <td><a target="_blank" href="https://attack.mitre.org/techniques/T1218/010/">T1218.010</a></td>
         <td><a target="_blank" href="https://lolbas-project.github.io/lolbas/Binaries/Regsvr32/">LOLBAS</a></td>
 
@@ -547,7 +554,7 @@
         <td>rfusclient.exe<br>rutserv.exe<br>rutview.exe</td>
         <td>Tool</td>
         <td>Remote Utilites (remote access software</td>
-        <td>Persistence</td>
+        <td>Persistence<br>Command and Control</td>
         <td><a target="_blank" href="https://attack.mitre.org/techniques/T1219/">T1219</a></td>
         <td>n/a</td>
     </tr>
@@ -559,21 +566,13 @@
         <td>Discovery</td>
         <td></td>
     </tr>
-    <tr>
-        <td></td>
-        <td>rfusclient.exe<br>rutserv.exe<br>rutview.exe</td>
-        <td>Tool</td>
-        <td>Remote Utilites (remote access software</td>
-        <td>Persistence</td>
-        <td><a target="_blank" href="https://attack.mitre.org/techniques/T1219/">T1219</a></td>
-        <td>n/a</td>
-    </tr>
+    
     <tr>
         <td></td>
         <td>rpcping.exe</td>
         <td>LOLbin</td>
         <td>Credential dumping, and forced authentication</td>
-        <td>Escalate</td>
+        <td>Credential Access<br>Privilege Escalation</td>
         <td><a target="_blank" href="https://attack.mitre.org/techniques/T1003/">T1003</a><br>
             <a target="_blank" href="https://attack.mitre.org/techniques/T1187/">T1187</a></td>
         <td><a target="_blank" href="https://lolbas-project.github.io/lolbas/Binaries/Rpcping/">LOLBAS</a></td>
@@ -582,8 +581,8 @@
         <td></td>
         <td>rundll32.exe</td>
         <td>LOLbin</td>
-        <td>Used for execution bypass, credential theft, DLL registration</td>
-        <td>Escalate / Persistence</td>
+        <td>Used for execution bypass, lsass dump, DLL registration. LSASS DUMP: ...comsvcs.dll, MiniDump [PID] C:\temp\out.dmp full </td>
+        <td>Execution<br>Defensive Evasion</td>
         <td><a target="_blank" href="https://attack.mitre.org/techniques/T1218/011/">T1218.011</a><br>
             <a target="_blank" href="https://attack.mitre.org/techniques/T1564/004/">T1564.004</a></td>
         <td><a target="_blank" href="https://lolbas-project.github.io/lolbas/Binaries/Rundll32/">LOLBAS</a></td>
@@ -594,7 +593,7 @@
         <td>sc.exe</td>
         <td>LOLbin</td>
         <td>Command line for communicating with Windows Service Control Manager.  Can disable services (with admin privileges) </td>
-        <td>Persistence</td>
+        <td>Discovery<br>Defensive Evasion<br>Execution</td>
         <td><a target="_blank" href="https://attack.mitre.org/techniques/T1564/004/">T1564.004</a></td>
         <td><a target="_blank" href="https://lolbas-project.github.io/lolbas/Binaries/Sc/">LOLBAS</a></td>
     </tr>
@@ -603,7 +602,7 @@
         <td>schtasks.exe</td>
         <td>LOLbin</td>
         <td>Create scheduled tasks with standard privileges </td>
-        <td>Persistence</td>
+        <td>Persistence<br>Execution<br>Privilege Escalation</td>
         <td><a target="_blank" href="https://attack.mitre.org/techniques/T1053/005">T1053.005</a></td>
         <td><a target="_blank" href="https://lolbas-project.github.io/lolbas/Binaries/Schtasks/">LOLBAS</a></td>
     </tr>
@@ -612,7 +611,7 @@
         <td>ScreenConnect.WindowsClient.exe</td>
         <td>Tool</td>
         <td>Remote access tool (remote desktop)</td>
-        <td>Persistence</td>
+        <td>Persistence<br>Command and Control</td>
         <td></td>
         <td>n/a</td>
     </tr>
@@ -621,7 +620,7 @@
         <td>sharphound.exe</td>
         <td>Recon tool</td>
         <td>Active Directory collector for Bloodhound</td>
-        <td>Discovery</td>
+        <td>Discovery<br>Reconnaissance</td>
         <td></td>
         <td>n/a</td>
     </tr>
@@ -630,7 +629,7 @@
         <td>sqlps.exe<br>sqltoolps.exe</td>
         <td>LOLbin</td>
         <td>Execute SQL Server PowerShell cmdlets. SQLTOOLPS.EXE in SQL SERVER 2016.</td>
-        <td>Pivote / Escalate</td>
+        <td>Execution</td>
         <td><a target="_blank" href="https://attack.mitre.org/techniques/T1218">T1218</a></td>
         <td><a target="_blank" href="https://lolbas-project.github.io/lolbas/OtherMSBinaries/Sqlps/">LOLBAS</a><br>
             <a target="_blank" href="https://lolbas-project.github.io/lolbas/OtherMSBinaries/Sqltoolps/">LOLBAS</a></td>
@@ -649,7 +648,7 @@
         <td>smbexec.py</td>
         <td>Tool</td>
         <td>Python tool to execute commands in a stealthy manner.  Transfers commands from the attacker's machine to the target Windows machine via SMB.  Uses %TEMP%/execute.bat. </td>
-        <td>Pivote / Escalate</td>
+        <td>Execution<br>Privilege Escalation<br>Defensive Evasion</td>
         <td></a></td>
         <td>n/a</td>
     </tr>
@@ -659,7 +658,7 @@
         <td>taskkill.exe</td>
         <td>LOLbin</td>
         <td>Ends one or more tasks or Windows processes. Processes can be ended by process ID or image name. </td>
-        <td>Pivote / Escalate </td>
+        <td></td>
         <td>
            
         </td>
@@ -683,7 +682,7 @@
         <td>TeamViewer.exe<br>TeamViewer_Service.exe</td>
         <td>Tool</td>
         <td>Remote access software</td>
-        <td>Persistence</td>
+        <td>Persistence<br>Command and Control</td>
         <td><a target="_blank" href="https://attack.mitre.org/techniques/T1219/">T1219</a></td>
         <td> n/a    </td>
     </tr>
@@ -693,7 +692,7 @@
         <td>utilman.exe</td>
         <td>LOLbin</td>
         <td>Attacker changes "cmd.exe" to "utilman.exe" and executes from login screen to launch command prompt without loggin in </td>
-        <td>Authentication Bypass</td>
+        <td>Initial Access</td>
         <td>
         </td>
     </tr>
@@ -713,7 +712,7 @@
         <td>vnc.exe</td>
         <td>Tool</td>
         <td>Remote desktop software</td>
-        <td>Persistence</td>
+        <td>Persistence<br>Command and Control</td>
         <td><a target="_blank" href="https://attack.mitre.org/techniques/T1021/">T1021</a> <br>
             <a target="_blank" href="https://attack.mitre.org/techniques/T1133/">T1133</a> <br>
             <a target="_blank" href="https://attack.mitre.org/techniques/T1219/">T1219</a> <br>
@@ -735,7 +734,7 @@
         <td>wget.exe</td>
         <td>Tool</td>
         <td>Used for HTTP, HTTPS, FTP at the command line</td>
-        <td>Pivot / Escalate</td>
+        <td>Exfiltration<br>Persistence</td>
         <td></td>
         <td>n/a</td>
     </tr>
@@ -745,7 +744,7 @@
         <td>wevtutil.exe</td>
         <td>LOLbin</td>
         <td>Enables retreival of event logs as well as the ability to clear logs (-cl parameter).</td>
-        <td>Pivot / Escalate</td>
+        <td>Defensive Evasion</td>
         <td><a target="_blank" href="https://attack.mitre.org/techniques/T1005/">T1005</a> <br> <a target="_blank" href="https://attack.mitre.org/techniques/T1562/">T1562</a> <br> <a target="_blank" href="https://attack.mitre.org/techniques/T1070/ ">T1070</a></td>
     </tr>
 
@@ -753,7 +752,7 @@
         <td></td>
         <td>whoami.exe</td>
         <td>LOLbin</td>
-        <td>Command line to see interactive user, group memberships, privileges, etc</td>
+        <td>Command line to see interactive user, group memberships, privileges, etc. /priv parameter used to view current logon permissions</td>
         <td>Discovery</td>
         <td></td>
     </tr>
@@ -772,7 +771,14 @@
         <td>wmic.exe</td>
         <td>LOLbin</td>
         <td>Windows Management Instrumentation (command line). Hunt for usage by interactive user.</td>
-        <td></td>
+        <td>Privilege Escalation<br>
+            Defensive Evasion<br>
+            Discovery<br>
+            Persistence<br>
+            Execution<br>
+            Credential Access<br>
+            Collection<br>
+            Exfiltration</td>
         <td><a target="_blank" href="https://attack.mitre.org/techniques/T1047/">T1047</a><br>
             <a target="_blank" href="https://attack.mitre.org/techniques/T1218/">T1218</a><br>
             <a target="_blank" href="https://attack.mitre.org/techniques/T1564/004/">T1564.004</a></td>
@@ -783,9 +789,12 @@
         <td>wscript.exe</td>
         <td>LOLbin</td>
         <td>Execute script code (javascript)</td>
-        <td>Initial Access</td>
+        <td>Execute<br>
+            Initial Access</td>
         <td><a target="_blank" href="https://attack.mitre.org/techniques/T1564/004/">T1564.004</a></td>
         <td><a target="_blank" href="https://lolbas-project.github.io/lolbas/Binaries/Wscript/">LOLBAS</a></td>
     </tr>
 
 </table>
+
+ 			
